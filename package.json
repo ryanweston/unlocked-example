@@ -7,6 +7,9 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@supabase/ui": "^0.36.3",
+    "@unlocked/foundation": "0.5.9",
+    "equal-vue": "^0.79.3",
     "vue": "^3.2.29",
     "vue-router": "^4.0.12"
   },
@@ -21,6 +24,7 @@
     "@vitejs/plugin-vue": "^2.1.0",
     "autoprefixer": "^10.4.2",
     "prettier-plugin-tailwindcss": "^0.1.4",
+    "rollup-plugin-visualizer": "^5.5.4",
     "tailwindcss": "^3.0.18",
     "vite": "^2.7.13"
   }
