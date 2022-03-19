@@ -4,11 +4,12 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "deploy": "./deploy.sh"
   },
   "dependencies": {
     "@supabase/ui": "^0.36.3",
-    "@unlocked/foundation": "0.5.9",
+    "@unlocked/foundation": "0.8.7",
     "equal-vue": "^0.79.3",
     "vue": "^3.2.29",
     "vue-router": "^4.0.12"
