@@ -1,11 +1,17 @@
+<script setup>
+import AppBar from '@/components/temp/AppBar.vue'
+import Header from './components/header.vue'
+</script>
 
 <template>
-  <div class="bg-gray-50">
+  <div>
+    <AppBar/>
+    <Header/>
     <div
       class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8"
     >
-    <!-- <PrimaryButton>Wow</PrimaryButton> -->
-    <UTestComponent />
+    <PrimaryButton>Wow</PrimaryButton>
+    <TestComponent />
       <h2
         class="bg-red-600 text-3xl font-extrabold leading-9 tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
       >
@@ -25,11 +31,4 @@
     </div>
   </div>
 </template>
-
-<script>
-import { UTestComponent } from '@unlocked/foundation'
-export default { 
-  components: { UTestComponent },
-}
-</script>
 
