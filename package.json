@@ -8,8 +8,7 @@
     "deploy": "./deploy.sh"
   },
   "dependencies": {
-    "@supabase/ui": "^0.36.3",
-    "@unlocked/foundation": "0.8.7",
+    "@unlocked/foundation": "0.8.8",
     "equal-vue": "^0.79.3",
     "vue": "^3.2.29",
     "vue-router": "^4.0.12"
