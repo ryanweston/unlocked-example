@@ -1,8 +1,17 @@
+<script lang="ts" setup>
+const props = defineProps({
+  title: String,
+  subtitle: String
+})
+</script>
+
 <template>
-  <Subtitle>
-    Why use Unlocked?
-  </Subtitle>
-  <Title>
-    Our features
-  </Title>
+  <div class="max-w-md">
+    <Subtitle>
+      {{ subtitle }}
+    </Subtitle>
+    <Title>
+      {{ title }}
+    </Title>
+  </div>
 </template>
