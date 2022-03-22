@@ -6,8 +6,8 @@ import Body from './components/body.vue'
 const navigation = [
   { name: 'Documentation', href: 'http://docs.unlocked.to', current: false },
   { name: 'Our mission', href: '#', current: false },
-  { name: 'Roadmap', href: '#', current: false },
-  { name: 'Products', href: '#', current: false },
+  { name: 'Roadmap', href: 'https://github.com/orgs/UnlockedUI/projects/1', current: false },
+  { name: 'Products', href: 'https://github.com/orgs/UnlockedUI', current: false },
   { name: 'Coming soon', href: '#', current: true },
 ]
 </script>
