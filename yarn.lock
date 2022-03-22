@@ -100,13 +100,6 @@
   resolved "https://registry.yarnpkg.com/@types/tailwindcss/-/tailwindcss-3.0.9.tgz#82dffdc096818c1989e1b75da8ea6b4f4cdf9cc4"
   integrity sha512-uZjNKNjlA6cr6py/GWsDjevJb/Bl0fmaMNUdIpNMW3TJGJzxN9O6uFWx97LiSK7ithWNrrDSytq1FdvHpgSvWg==
 
-"@unlocked/foundation@0.8.9":
-  version "0.8.9"
-  resolved "https://registry.yarnpkg.com/@unlocked/foundation/-/foundation-0.8.9.tgz#980f65bafd3c0d82c4ffb2b38ccf6af815af9eac"
-  integrity sha512-+9xdp6nAlEaGXWWgB8p+2YKOrq8s3Ej8FQpC5OsnV/B50+k2snMgJ7QsIgUWg/R79iZLEFV3UapTQIQmyK3ySA==
-  dependencies:
-    vue "^3.2.21"
-
 "@vitejs/plugin-vue@^2.1.0":
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-2.2.4.tgz#ab8b199ca82496b05d2654c5f34ffcf9b947243d"
@@ -1277,7 +1270,7 @@ vue-router@^4.0.12:
   dependencies:
     "@vue/devtools-api" "^6.0.0"
 
-vue@^3.0.5, vue@^3.2.21, vue@^3.2.29:
+vue@^3.0.5, vue@^3.2.29:
   version "3.2.31"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.31.tgz#e0c49924335e9f188352816788a4cca10f817ce6"
   integrity sha512-odT3W2tcffTiQCy57nOT93INw1auq5lYLLYtWpPYQQYQOOdHiqFct9Xhna6GJ+pJQaF67yZABraH47oywkJgFw==
