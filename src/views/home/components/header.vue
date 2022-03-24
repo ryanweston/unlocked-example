@@ -4,22 +4,22 @@
       <Headline>The modern, forward thinking, component library solution.</Headline>
     </div>
 
-    <div class="flex w-full items-center justify-center mx-auto py-16">
-      <div class="flex flex-row items-center">
+    <div class="flex flex-col md:flex-row w-full md:items-center justify-center mx-auto py-16">
+      <div class="flex flex-row justify-center md:justify-start items-center">
         <span class="iconify mr-3" data-icon="logos:figma"></span>
         <p class="flex mr-8">Maintained Figma UI kit</p>
       </div>
-      <div class="flex flex-row items-center">
+      <div class="flex flex-row justify-center md:justify-start items-center mt-3 md:mt-0">
         <span class="iconify mr-3" data-icon="logos:storybook-icon"></span>
         <p class="flex mr-8">Storybook & local documentation</p>
       </div>
-      <div class="flex flex-row items-center">
+      <div class="flex flex-row justify-center md:justify-start items-center mt-3 md:mt-0">
         <span class="iconify mr-3" data-icon="logos:vue"></span>
         <p class="flex mr-8">Built with Vue3</p>
       </div>
     </div>
 
-    <div class="flex w-100 flex-row items-center justify-center mx-auto">
+    <div class="flex w-100 flex-col sm:flex-row md:items-center md:justify-center mx-auto">
       <Button 
         external 
         type="secondary"
@@ -31,7 +31,7 @@
         </template>
         Visit GitHub 
       </Button>
-      <Button disabled class="ml-2">Coming soon!</Button>
+      <Button disabled class="mt-2 sm:ml-2 sm:mt-0">Coming soon!</Button>
     </div>
   </div>
 </template>

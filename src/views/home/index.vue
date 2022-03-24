@@ -13,14 +13,15 @@ const navigation = [
 
 const dropdown = [
   { name: 'Component library', href: 'https://github.com/UnlockedUI/unlocked-ui', icon: '<img class="mr-3" src="/logo-icon.svg" />'},
-  { name: 'Web3 components', href: '#', icon: '<img class="mr-3" src="/logo-icon.svg" />'},
-  { name: 'Figma UI kit', href: '#', icon: '<span class="iconify mr-3" data-icon="logos:figma">'},
+  { name: 'Web3 components', href: '#', icon: '<img class="mr-3" src="/logo-icon.svg" />', disabled: true},
+  { name: 'Figma UI kit', href: '#', icon: '<span class="iconify mr-3" data-icon="logos:figma">', disabled: true},
 ]
 </script>
 
 <template>
   <div>
-    <AppBar title="Unlocked" logo logoUrl="/logo-withoutText.svg" logoHref="#">
+    <!-- TODO: Fix mobile navigation  -->
+    <AppBar title="Unlocked" :navigation="navigation" logo logoUrl="/logo-withoutText.svg" logoHref="#">
       <template #rightSide>
         <div v-for="item in navigation" :key="item.name">
           <Dropdown 

@@ -100,10 +100,10 @@
   resolved "https://registry.yarnpkg.com/@types/tailwindcss/-/tailwindcss-3.0.9.tgz#82dffdc096818c1989e1b75da8ea6b4f4cdf9cc4"
   integrity sha512-uZjNKNjlA6cr6py/GWsDjevJb/Bl0fmaMNUdIpNMW3TJGJzxN9O6uFWx97LiSK7ithWNrrDSytq1FdvHpgSvWg==
 
-"@unlocked/foundation@0.9.1":
-  version "0.9.1"
-  resolved "https://registry.yarnpkg.com/@unlocked/foundation/-/foundation-0.9.1.tgz#6db6cb78bb93fd478ddf54ba6d98d246da4f51ac"
-  integrity sha512-/AMJun6U4ulbvzT92aDynervEuaGNgwLdUny0kr1IhVKLvPZCRKSZjE5kAeH95njBDLdqJGJEXbqzSMpC6xGRw==
+"@unlocked/foundation@0.9.2":
+  version "0.9.2"
+  resolved "https://registry.yarnpkg.com/@unlocked/foundation/-/foundation-0.9.2.tgz#d4e0157f70dfbf641ec23597aeb0771f51714783"
+  integrity sha512-CwVcuMUEBwVXwqUjrImtTdpzZ3jvxt3VV7Gc+g7aZXK+Ix+ynIN1c13uBWBiakA3VowDbv9T0WSttNBZ7Xwlvw==
   dependencies:
     vue "^3.2.21"
 

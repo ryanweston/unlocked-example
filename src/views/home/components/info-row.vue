@@ -13,8 +13,8 @@ const prop = defineProps<Props>()
 </script>
 
 <template>
-  <div class="flex w-100 items-center justify-between mx-auto">
-    <div :class="[i > 0 ? 'ml-10' : '', 'flex-column']" v-for="(item, i) in items" :key="i">
+  <div class="flex flex-col md:flex-row w-100 items-center justify-between mx-auto">
+    <div :class="[i > 0 ? 'md:ml-10 ' : '', 'flex-column mt-10 lg:mt-0']" v-for="(item, i) in items" :key="i">
       <!-- Title -->
       <div class="flex flex-row items-center font-bold text-lg">
         <div v-html="item.icon"></div>

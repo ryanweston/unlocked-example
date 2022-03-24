@@ -22,7 +22,7 @@ const communityRow = [
       subtitle="Why use unlocked"
     />
      <div class="w-100 py-8">
-       <div class="w-full grid grid-cols-8 gap-4">
+       <div class="w-full grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4">
         <ul class="list-disc list-inside col-span-2">
           <li class="mb-2">
             Open source
@@ -88,7 +88,7 @@ const communityRow = [
 
   <div class="mx-auto max-w-screen-lg px-4 py-12 sm:px-6 lg:py-24 lg:px-8">
     <div class="lg:flex lg:items-center lg:justify-between text-center">
-      <h1 class="text-5xl px-24 leading-tight">
+      <h1 class="text-2xl lg:text-5xl px-6 lg:px-24 md:leading-tight">
         We understand the trade offs that using an open source design system comes with. We can work with you here.
       </h1>
     </div>
