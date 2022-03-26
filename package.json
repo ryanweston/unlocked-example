@@ -8,7 +8,8 @@
     "deploy": "./deploy.sh"
   },
   "dependencies": {
-    "@unlocked/foundation": "0.9.2",
+    "@unlocked/foundation": "0.9.3",
+    "@mdi/js": "^6.6.95",
     "equal-vue": "^0.79.3",
     "vue": "^3.2.29",
     "vue-router": "^4.0.12"
