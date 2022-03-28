@@ -23,7 +23,7 @@
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.16.1",
+    "@antfu/eslint-config": "^0.18.9",
     "@headlessui/vue": "^1.4.3",
     "@heroicons/vue": "^1.0.5",
     "@highlightjs/vue-plugin": "^2.1.0",
