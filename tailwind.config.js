@@ -23,6 +23,12 @@ module.exports = {
     //    'black': 'red'
     //   },
     // }
+    extend: { 
+      colors: { 
+        grey: '#ededed',
+        transparent: 'transparent',
+      }
+    }
   },
   plugins: [
     require('@tailwindcss/forms'),

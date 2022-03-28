@@ -1,14 +1,15 @@
 import { createApp } from 'vue'
 import './tailwind.css'
+import { createRouter, createWebHistory } from 'vue-router'
+import { defaultTheme, unlockedGlobal } from '@unlocked/foundation'
 import App from './App.vue'
 import { routes } from './routes.js'
-import { createRouter, createWebHistory } from 'vue-router'
-import { unlockedGlobal, defaultTheme } from '@unlocked/foundation'
 
-const app = createApp(App).use(unlockedGlobal, { 
-  theme: defaultTheme
+const app = createApp(App)
+
+app.use(unlockedGlobal, {
+  theme: defaultTheme,
 })
-
 
 const router = createRouter({
   history: createWebHistory(),

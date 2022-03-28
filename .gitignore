@@ -4,3 +4,4 @@ dist-ssr
 *.local
 debug.log
 .idea
+stats.html
