@@ -329,10 +329,10 @@
     "@typescript-eslint/types" "5.16.0"
     eslint-visitor-keys "^3.0.0"
 
-"@unlocked/foundation@^0.9.3":
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/@unlocked/foundation/-/foundation-0.9.3.tgz#ff805b7cc4795f1ebb95eb4c1e4c289711cc1577"
-  integrity sha512-lS+myopQ9P19w1sfAD2UjieXaYkSXGgPr4hDaUbur/O4DPYszh73cMSk6NM3felVZGxWjNA0LMsZ0rrOvgU5aA==
+"@unlocked/foundation@^0.9.4":
+  version "0.9.4"
+  resolved "https://registry.yarnpkg.com/@unlocked/foundation/-/foundation-0.9.4.tgz#75e96d3f5c0043deff731364a7a22ec3b1f63b99"
+  integrity sha512-4jj426yKFh1OAQE06Caz+vAFt5rzdPD6d5qb+VhKd62OWdjZF9gwc9Z91FYfu4EoioXAfl+Vh8jG5uU60ssVcA==
   dependencies:
     vue "^3.2.21"
 
@@ -444,6 +444,15 @@
     "@vueuse/shared" "5.3.0"
     vue-demi "*"
 
+"@vueuse/core@^8.2.0":
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-8.2.0.tgz#2e9163c0bbe8dcb240fdd89d9c8a52576fce8db7"
+  integrity sha512-89ZfKtFHz5ynfpWyFVXtK0yePJ2MZqFaOxnGeZn7cIp8KFbPRlu6Wsxi3gBkJNpjq+q9qbEh6MjV7QBvqCQ5Og==
+  dependencies:
+    "@vueuse/metadata" "8.2.0"
+    "@vueuse/shared" "8.2.0"
+    vue-demi "*"
+
 "@vueuse/integrations@^5.0.3":
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/@vueuse/integrations/-/integrations-5.3.0.tgz#a2a829fc536954e91123c4e5b4d77b1f50aaeafe"
@@ -459,10 +468,22 @@
     qrcode "^1.4.4"
     universal-cookie "^4.0.4"
 
+"@vueuse/metadata@8.2.0":
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/@vueuse/metadata/-/metadata-8.2.0.tgz#f62a02e840220768941b3683dd8171c39581b950"
+  integrity sha512-cbaezEccNuxQC+OiudG9VjZNg9/RbAAHkyuhC6+8Gsgsc+MvDhfn1NrV6NNTaldLlZgJFgUiYOkrf3JGTTTGXQ==
+
 "@vueuse/shared@5.3.0":
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/@vueuse/shared/-/shared-5.3.0.tgz#2b9583f80f1284242f808925e7e141310e400e45"
   integrity sha512-qZfkPFH0qTScFpYiPOFpTcxWriRhlM3bgSzl3DFTgr/U0eZg3w2EFWaRZHdWeSvAUdNQyjOC4Toa8S0zJyEjHw==
+  dependencies:
+    vue-demi "*"
+
+"@vueuse/shared@8.2.0":
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/@vueuse/shared/-/shared-8.2.0.tgz#a8e2b637cfd866ea985615df9ec4913c4355c084"
+  integrity sha512-dTw7EJZgZCgG9DoVAiz4LtmKnIFXuE/idUFzvqRAJLjbPiVJc+qQH5kDUdKHI3W1U9t//1mdasQEKONArburiQ==
   dependencies:
     vue-demi "*"
 

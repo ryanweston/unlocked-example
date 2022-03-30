@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:py-28 lg:px-8">
+  <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:py-36 lg:px-none">
     <div class="lg:flex lg:items-center lg:justify-between text-center">
       <Headline>The modern, forward thinking, component library solution.</Headline>
     </div>
