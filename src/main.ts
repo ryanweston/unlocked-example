@@ -14,7 +14,7 @@ app.use(unlockedGlobal, {
 })
 
 const router = createRouter({
-  history: createWebHistory('/unlocked-website/'),
+  history: createWebHistory(),
   routes,
 })
 
