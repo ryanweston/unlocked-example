@@ -11,5 +11,5 @@ export const routes = [
   { path: '/mission', component: Mission, meta: { title: 'Our mission' } },
   { path: '/web3', component: Web3, meta: { title: 'Web3' } },
   { path: '/:path(.*)', component: NotFound },
-  ...web3Routes
+  ...web3Routes,
 ]

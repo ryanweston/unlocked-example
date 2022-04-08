@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { useRoute } from 'vue-router'
 import { defineAsyncComponent, ref } from 'vue'
-import { mdiArrowLeft, mdiCodeTags, mdiEye, mdiClipboardFileOutline } from '@mdi/js'
+import { mdiArrowLeft, mdiClipboardFileOutline, mdiCodeTags, mdiEye } from '@mdi/js'
 import { useClipboard } from '@vueuse/core'
 // @ts-expect-error look at plugin repo
 import Markdown from './pages/connect-wallet/component.md'
@@ -57,7 +57,7 @@ const isComponent = defineAsyncComponent(() =>
       </Button>
 
       <Tooltip class="ml-auto">
-        <template #activator="{on, reveal}">
+        <template #activator="{reveal}">
           <Button
             type="alternate"
             @click="() => { copy(codeBlockText.children[0].innerText); reveal(3000) }"
@@ -68,7 +68,7 @@ const isComponent = defineAsyncComponent(() =>
           </Button>
         </template>
         Copied!
-      </Tooltip> 
+      </Tooltip>
     </div>
     <div :class="[compActive ? 'flex items-center justify-center' : '', 'mt-4 h-96 w-full rounded-md overflow-scroll border border-greyBorder bg-grey resize-y']">
       <component :is="isComponent" v-show="compActive" />

@@ -43,6 +43,9 @@ const dropdown = [
           </div>
         </template>
       </AppBar>
+      <router-link to="/mission">
+        CLICK ME
+      </router-link>
       <router-view />
       <Footer />
     </div>

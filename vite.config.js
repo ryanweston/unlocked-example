@@ -5,13 +5,16 @@ import { visualizer } from 'rollup-plugin-visualizer'
 import Markdown from 'vite-plugin-md'
 
 export default defineConfig({
-  plugins: [vue({ include: [/\.vue$/, /\.md$/] }), visualizer(
-    {
+  plugins: [
+    vue({ include: [/\.vue$/, /\.md$/] }),
+    visualizer({
       filename: './dist/report.html',
       open: true,
       brotliSize: true,
     },
-  ), Markdown()],
+    ),
+    Markdown(),
+  ],
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
