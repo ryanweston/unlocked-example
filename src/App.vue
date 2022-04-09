@@ -21,7 +21,7 @@ const dropdown = [
   <main>
     <div class="relative min-h-screen">
       <!-- TODO: Fix mobile navigation  -->
-      <AppBar title="Unlocked" :navigation="navigation" logo logo-url="/logo-withoutText.svg" logo-href="/">
+      <AppBar title="Unlocked" :navigation="navigation" logo logo-url="/logo.svg" logo-href="/">
         <template #rightSide>
           <div v-for="item in navigation" :key="item.name">
             <Dropdown
