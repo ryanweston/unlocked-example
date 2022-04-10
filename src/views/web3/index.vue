@@ -17,10 +17,10 @@ const items = [
     <!-- <div class="absolute w-50">
     <img class="h-50 w-auto" src="/logo-icon-web3.svg"/>
   </div> -->
-    <Headline>Unlocked Web3</Headline>
-    <Subtitle class="mt-2">
+    <u-headline>Unlocked Web3</u-headline>
+    <u-subtitle class="mt-2">
       A selection of Web3 components and guides to help get your application going.
-    </Subtitle>
+    </u-subtitle>
   </div>
 
   <div class="mx-auto max-w-screen-xl px-4 py-6 sm:px-6 lg:pb-28 lg:pt-14 lg:px-8">

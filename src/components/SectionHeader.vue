@@ -1,17 +1,17 @@
 <script lang="ts" setup>
 const props = defineProps({
   title: String,
-  subtitle: String
+  subtitle: String,
 })
 </script>
 
 <template>
   <div class="max-w-md">
-    <Subtitle>
+    <u-subtitle class="text-gray-300">
       {{ subtitle }}
-    </Subtitle>
-    <Title>
+    </u-subtitle>
+    <u-title>
       {{ title }}
-    </Title>
+    </u-title>
   </div>
 </template>

@@ -1,34 +1,23 @@
-// const defaultTheme = require('tailwindcss/defaultTheme')
-// const unlockedTailwind = require('@unlocked/foundation/tailwind.config.js')
+const tokens = require('@unlocked/foundation/tokens')
 
-const tokens = require('./src/tokens/tokens');
+// TODO: Look for a better way to handle Tailwind's purge
 
-const colors = Object.fromEntries(Object
-  .values(tokens.color)
-  .map(({ attributes, value }) => [
-    attributes.type, value
-  ]));
+// console.log({ ...tokens })
 
 /** @type {import("@types/tailwindcss/tailwind-config").TailwindConfig } */
 module.exports = {
-  content: ['./index.html', './node_modules/@unlocked/foundation/dist/**/**/**/*.{js,css}','./src/**/*.{vue,js,ts,jsx,tsx}'],
+  content: ['./index.html', './node_modules/@unlocked/foundation/dist/**/**/**/*.{js,css}', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
-    colors,
-  //  ...unlockedTailwind.theme,
+    ...tokens,
     fontFamily: {
       sans: ['"Inter var"'],
     },
-    // extend: {
-    //   colors: {
-    //    'black': 'red'
-    //   },
-    // }
-    extend: { 
-      colors: { 
+    extend: {
+      colors: {
         grey: '#ededed',
         transparent: 'transparent',
-      }
-    }
+      },
+    },
   },
   plugins: [
     require('@tailwindcss/forms'),

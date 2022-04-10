@@ -6,7 +6,7 @@ export default { name: 'Component' }
 </script>
 
 <template>
-  <Button size="large">
+  <u-button size="large">
     Connect wallet
-  </Button>
+  </u-button>
 </template>

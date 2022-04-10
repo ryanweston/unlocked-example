@@ -21,16 +21,16 @@ const dropdown = [
   <main>
     <div class="relative min-h-screen">
       <!-- TODO: Fix mobile navigation  -->
-      <AppBar title="Unlocked" :navigation="navigation" logo logo-url="/logo.svg" logo-href="/">
+      <u-menu title="Unlocked" :navigation="navigation" logo="/logo.svg" logo-href="/">
         <template #rightSide>
           <div v-for="item in navigation" :key="item.name">
-            <Dropdown
+            <u-dropdown
               v-if="item.name === 'Products'"
               text="Products"
               :items="dropdown"
             />
             <!-- TODO: Move this logic into the package component -->
-            <Button
+            <u-button
               v-else
               :external="item.external"
               :href="item.href"
@@ -39,10 +39,10 @@ const dropdown = [
               :type="item.type"
             >
               {{ item.name }}
-            </Button>
+            </u-button>
           </div>
         </template>
-      </AppBar>
+      </u-menu>
       <router-view />
       <Footer />
     </div>

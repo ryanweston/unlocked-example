@@ -23,54 +23,54 @@ const isComponent = defineAsyncComponent(() =>
 
 <template>
   <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:pt-14 lg:pb-6 lg:px-8">
-    <Button class="mb-12" href="/web3" type="text">
+    <u-button class="mb-12" href="/web3" type="text">
       <template #prefixIcon>
-        <Icon>
+        <u-icon>
           {{ mdiArrowLeft }}
-        </Icon>
+        </u-icon>
       </template>
       Back to components
-    </Button>
-    <Title>{{ route.meta.title }}</Title>
-    <Subtitle class="mt-2">
+    </u-button>
+    <u-title>{{ route.meta.title }}</u-title>
+    <u-subtitle class="mt-2">
       {{ route.meta.subtitle }}
-    </Subtitle>
+    </u-subtitle>
   </div>
 
   <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:pt-6 lg:pb-14 lg:px-8">
     <div class="flex flex-row w-full">
-      <Button group first :active="compActive" @click="() => {changeStatus(true)}">
+      <u-button group first :active="compActive" @click="() => {changeStatus(true)}">
         <template #prefixIcon>
-          <Icon>
+          <u-icon>
             {{ mdiEye }}
-          </Icon>
+          </u-icon>
         </template>
         Preview
-      </Button>
-      <Button group last :active="!compActive" @click="() => {changeStatus(false)}">
+      </u-button>
+      <u-button group last :active="!compActive" @click="() => {changeStatus(false)}">
         <template #prefixIcon>
-          <Icon>
+          <u-icon>
             {{ mdiCodeTags }}
-          </Icon>
+          </u-icon>
         </template>
         Code
-      </Button>
+      </u-button>
 
-      <Tooltip class="ml-auto">
+      <u-tooltip class="ml-auto">
         <template #activator="{reveal}">
-          <Button
+          <u-button
             type="alternate"
             @click="() => { copy(codeBlockText.children[0].innerText); reveal(3000) }"
           >
-            <Icon>
+            <u-icon>
               {{ mdiClipboardFileOutline }}
-            </Icon>
-          </Button>
+            </u-icon>
+          </u-button>
         </template>
         Copied!
-      </Tooltip>
+      </u-tooltip>
     </div>
-    <div :class="[compActive ? 'flex items-center justify-center' : '', 'mt-4 h-96 w-full rounded-md overflow-scroll border border-greyBorder bg-grey resize-y']">
+    <div :class="[compActive ? 'flex items-center justify-center' : '', 'mt-4 h-96 w-full rounded-md overflow-scroll border border-layoutBorder bg-grey resize-y']">
       <component :is="isComponent" v-show="compActive" />
       <div ref="codeBlockText">
         <Markdown v-show="!compActive" />

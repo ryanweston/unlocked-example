@@ -346,10 +346,10 @@
     "@typescript-eslint/types" "5.18.0"
     eslint-visitor-keys "^3.0.0"
 
-"@unlocked/foundation@^0.9.4":
-  version "0.9.4"
-  resolved "https://registry.yarnpkg.com/@unlocked/foundation/-/foundation-0.9.4.tgz#75e96d3f5c0043deff731364a7a22ec3b1f63b99"
-  integrity sha512-4jj426yKFh1OAQE06Caz+vAFt5rzdPD6d5qb+VhKd62OWdjZF9gwc9Z91FYfu4EoioXAfl+Vh8jG5uU60ssVcA==
+"@unlocked/foundation@^0.9.7":
+  version "0.9.7"
+  resolved "https://registry.yarnpkg.com/@unlocked/foundation/-/foundation-0.9.7.tgz#cbc78f389c476bd736e8b34343ede31f3c6bb561"
+  integrity sha512-ggqhjm2qc1bab/QJ3ugcWuUOrukQm5aOKRgVT/HDHhQBvfqRLCOyo/cMrhxO+HHv50QKRB1U4YC3z1yh+3s9jg==
   dependencies:
     vue "^3.2.21"
 

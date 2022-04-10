@@ -1,9 +1,23 @@
+<script lang="ts" setup>
+import { mdiArrowLeft } from '@mdi/js'
+</script>
+
 <template>
-  <header class="bg-white shadow">
-    <div class="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
-      <h1 class="text-3xl font-bold leading-tight text-gray-900">
-        Not Found
-      </h1>
+  <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:py-36 lg:px-none">
+    <div class="w-full text-center">
+      <u-headline>404</u-headline>
+      <u-subtitle class="mt-2">
+        Your page could not be found
+      </u-subtitle>
+
+      <u-button class="mt-12" href="/web3" type="text">
+        <template #prefixIcon>
+          <u-icon>
+            {{ mdiArrowLeft }}
+          </u-icon>
+        </template>
+        Back to homepage
+      </u-button>
     </div>
-  </header>
+  </div>
 </template>

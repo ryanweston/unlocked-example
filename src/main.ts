@@ -4,7 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 // @ts-expect-error fix types on
 import { defaultTheme, unlockedGlobal } from '@unlocked/foundation'
 import App from './App.vue'
-import { routes } from './routes.js'
+import { routes } from './routes'
 import './prism.js'
 
 const app = createApp(App)
