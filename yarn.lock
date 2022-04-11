@@ -3710,10 +3710,10 @@ vite-plugin-md@^0.12.4:
     gray-matter "^4.0.3"
     markdown-it "^12.3.2"
 
-vite-ssg@^0.19.0:
-  version "0.19.0"
-  resolved "https://registry.yarnpkg.com/vite-ssg/-/vite-ssg-0.19.0.tgz#731b3461438c0420da5d35bcb7677d7e052babdd"
-  integrity sha512-LpjMTs12BgTpb4YwLKhvGd6ZRMxDf02Hq+B4uxdIe1+565nYsLkaem9U5vsuSMOu7lN9Y3XTXd752fmtuG2xHA==
+vite-ssg@^0.19.2:
+  version "0.19.2"
+  resolved "https://registry.yarnpkg.com/vite-ssg/-/vite-ssg-0.19.2.tgz#f0d2153d6a96b299789ff4f96b5a155f02cd3830"
+  integrity sha512-r9UJJ4OTMyu9f4nNe12PMVhVkeXYp1rUKbIl6zIOz5QDYEDgFcq8hZGUMMIAcyHhB4pH5ImmjZd1hJ2fO6hOmg==
   dependencies:
     fs-extra "^10.0.1"
     html-minifier "^4.0.0"
