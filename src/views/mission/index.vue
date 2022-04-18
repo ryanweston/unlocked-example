@@ -25,7 +25,7 @@
         As we look to the future of the web, we're looking to provide tools for developers adopting new forward thinking web technologies such as Web3, AR & VR. We're adopting this ethos as we built out our
         <u-link href="/web3">
           Web3 components
-        </u-link>. These are compositional components, inspired by TailwindUI and built with Unlocked, to help fastrack your Web3 projects.
+        </u-link>. These are compositional components, inspired by TailwindUI and built with Unlocked, to help fast track your Web3 projects.
       </u-subtitle>
     </div>
   </div>

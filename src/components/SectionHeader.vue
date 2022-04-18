@@ -7,7 +7,7 @@ const props = defineProps({
 
 <template>
   <div class="max-w-md">
-    <u-subtitle class="text-gray-300">
+    <u-subtitle class="text-gray-400">
       {{ subtitle }}
     </u-subtitle>
     <u-title>

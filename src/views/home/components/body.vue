@@ -19,7 +19,7 @@ const communityRow = [
   <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:pb-16 lg:pt-0 lg:px-8">
     <SectionHeader
       title="Our features"
-      subtitle="Why use unlocked"
+      subtitle="What does Unlocked offer?"
     />
     <div class="w-100 py-8">
       <div class="w-full grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4">
@@ -101,7 +101,7 @@ const communityRow = [
   <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:py-16 lg:px-8">
     <SectionHeader
       title="Built for the community, by the community"
-      subtitle="Why use unlocked"
+      subtitle="Why use unlocked?"
     />
     <div class="flex w-100 items-center justify-between mx-auto lg:py-16">
       <InfoRow :items="communityRow" />
