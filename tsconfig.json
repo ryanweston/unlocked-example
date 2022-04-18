@@ -33,10 +33,10 @@
     "isolatedModules": true,
   },
   "include": [
-    "src/**/**/**/*.vue",
-    "src/**/**/*.ts",
-    "src/**/**/*.d.ts",
-    "src/**/**/*.js"
+    "src/**/*.vue",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.js"
   ],
   "exclude": [
     "node_modules"
