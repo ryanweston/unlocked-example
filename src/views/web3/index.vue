@@ -2,11 +2,11 @@
 import ListItem from './components/item.vue'
 
 const items = [
-  { name: 'Connect wallet', available: true, to: '/web3/connect-wallet' },
-  { name: 'Transaction indicator', available: false },
+  { name: 'Connect wallet', available: true, path: 'connect-wallet' },
+  { name: 'Wallet address', available: true, path: 'wallet-address' },
+  { name: 'Transaction indicator', path: 'transaction-indicator', available: false },
   { name: 'Balance', available: false },
   { name: 'Send modal', available: false },
-  { name: 'Wallet address', available: false },
   { name: 'Transaction status', available: false },
   { name: 'QR Code', available: false },
 ]

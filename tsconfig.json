@@ -10,7 +10,6 @@
     "paths": {
       "@/*": ["./*"]
     },
-    "outDir": "./dist/esm",
     "preserveConstEnums": true,
     "preserveValueImports": true,
     "importsNotUsedAsValues": "error",

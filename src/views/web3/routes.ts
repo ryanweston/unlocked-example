@@ -10,5 +10,13 @@ export const web3Routes = [
       subtitle: 'Use WalletConnect to responsively onboard your Web3 users.',
     },
   },
-  { path: '/web3/transaction-indicator', component: ItemPage, meta: { title: 'Transaction indicator', path: 'transaction-indicator' } },
+  {
+    path: '/web3/wallet-address',
+    component: ItemPage,
+    meta: {
+      title: 'Wallet address component',
+      path: 'wallet-address',
+      subtitle: 'Display a wallet address using Unlocked Web3 utils.',
+    },
+  },
 ]

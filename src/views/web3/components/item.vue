@@ -6,10 +6,10 @@ const props = defineProps({
 </script>
 
 <template>
-  <a :href="item.to" :class="[!item.available ? 'opacity-60 cursor-not-allowed pointer-events-none' : '', 'w-full border-solid border border-layoutBorder rounded-lg divide-y divide-layoutBorder hover:shadow']">
+  <a :href="`/web3/${item.path}` " :class="[!item.available ? 'opacity-60 cursor-not-allowed pointer-events-none' : '', 'w-full border-solid border border-layoutBorder rounded-lg divide-y divide-layoutBorder hover:shadow']">
     <div class="w-full flex items-center justify-between space-x-6">
       <div class="flex-1">
-        <img class="w-full h-auto bg-gray-300 flex-shrink-0" src="/images/stacked.png" alt="">
+        <img class="w-full h-auto bg-gray-300 flex-shrink-0" :src="!item.available ? '/images/soon.png' : `images/${item.path}.png`" alt="">
       </div>
     </div>
     <div>

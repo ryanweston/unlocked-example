@@ -76,5 +76,36 @@ const isComponent = defineAsyncComponent(() =>
         <Markdown v-show="!compActive" />
       </div>
     </div>
+    <div class="mt-10 px-10 py-10 bg-gray-100 border-2 border-gray-100">
+      <u-title>
+        Instructions & documentation
+      </u-title>
+      <u-subtitle class="mt-4">
+        Required dependencies
+      </u-subtitle>
+      <div class="mt-4 flex flex-row">
+        <div class="bg-gray-300 px-4 py-2 rounded-lg font-semibold">
+          <u-body>
+            @unlocked/foundation
+          </u-body>
+        </div>
+        <div class="ml-2 bg-gray-300 px-4 py-2 rounded-lg font-semibold">
+          <u-body>
+            web3
+          </u-body>
+        </div>
+        <div class="ml-2 bg-gray-300 px-4 py-2 rounded-lg font-semibold">
+          <u-body>
+            @walletconnect/web3-provider
+          </u-body>
+        </div>
+      </div>
+      <u-subtitle class="mt-6">
+        Notes & information
+      </u-subtitle>
+      <div class="mt-4">
+        Ensure that the information is here and well described.
+      </div>
+    </div>
   </div>
 </template>
