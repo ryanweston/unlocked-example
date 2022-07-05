@@ -1,27 +1,27 @@
 <template>
   <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:py-36 lg:px-none">
     <div class="lg:flex lg:items-center lg:justify-between text-center">
-      <u-headline>The modern, forward thinking, component library solution.</u-headline>
+      <u-headline>Build for the future & unlock your designs.</u-headline>
     </div>
 
     <div class="flex flex-col md:flex-row w-full md:items-center justify-center mx-auto py-16">
       <div class="flex flex-row justify-center md:justify-start items-center">
         <span class="iconify mr-3" data-icon="logos:figma" />
-        <p class="flex mr-8">
+        <u-body class="flex mr-8">
           Maintained Figma UI kit
-        </p>
+        </u-body>
       </div>
       <div class="flex flex-row justify-center md:justify-start items-center mt-3 md:mt-0">
         <span class="iconify mr-3" data-icon="logos:storybook-icon" />
-        <p class="flex mr-8">
+        <u-body class="flex mr-8">
           Storybook & local documentation
-        </p>
+        </u-body>
       </div>
       <div class="flex flex-row justify-center md:justify-start items-center mt-3 md:mt-0">
         <span class="iconify mr-3" data-icon="logos:vue" />
-        <p class="flex mr-8">
+        <u-body class="flex mr-8">
           Built with Vue3
-        </p>
+        </u-body>
       </div>
     </div>
 
@@ -38,7 +38,7 @@
         </template>
         Visit GitHub
       </u-button>
-      <u-button size="large" class="mt-2 sm:ml-2 sm:mt-0">
+      <u-button size="large" class="mt-2 sm:ml-4 sm:mt-0">
         Start using Unlocked
       </u-button>
     </div>

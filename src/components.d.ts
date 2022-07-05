@@ -12,6 +12,7 @@ declare module '@vue/runtime-core' {
     UTitle: typeof import('@unlocked/foundation')['UTitle']
     USubtitle: typeof import('@unlocked/foundation')['Subtitle']
     UBody: typeof import('@unlocked/foundation')['UBody']
+    UFooter: typeof import('@unlocked/foundation')['UFooter']
   }
 }
 

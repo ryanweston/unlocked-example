@@ -341,13 +341,6 @@
     "@typescript-eslint/types" "5.19.0"
     eslint-visitor-keys "^3.0.0"
 
-"@unlocked/foundation@^0.9.9":
-  version "0.9.9"
-  resolved "https://registry.yarnpkg.com/@unlocked/foundation/-/foundation-0.9.9.tgz#3d1bf69b82069ab33c6ca0e33dbf5c165b79a223"
-  integrity sha512-TKO3w4cTWMkCTg7uBRo6SfvHbmrvta/QGpK0ahSBzQqHgTkJDlQBGjL8e5sOkxozWNhtEtUjk2OFwtcGno8dkw==
-  dependencies:
-    vue "^3.2.33"
-
 "@vitejs/plugin-vue@^2.1.0":
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-2.3.1.tgz#5f286b8d3515381c6d5c8fa8eee5e6335f727e14"
@@ -3769,7 +3762,7 @@ vue-router@^4.0.12:
   dependencies:
     "@vue/devtools-api" "^6.0.0"
 
-vue@^3.0.5, vue@^3.2.29, vue@^3.2.33:
+vue@^3.0.5, vue@^3.2.29:
   version "3.2.33"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.33.tgz#7867eb16a3293a28c4d190a837bc447878bd64c2"
   integrity sha512-si1ExAlDUrLSIg/V7D/GgA4twJwfsfgG+t9w10z38HhL/HA07132pUQ2KuwAo8qbCyMJ9e6OqrmWrOCr+jW7ZQ==

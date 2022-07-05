@@ -4,7 +4,7 @@ import SectionHeader from '@/components/SectionHeader.vue'
 
 const featuresRow = [
   { icon: '<span class="iconify" data-icon="charm:rocket"></span>', title: 'Next generation', content: 'We want to help enable the next generation of web. Our components should and will be fully compatible and supported with any current and future web3 advancements.' },
-  { icon: '<span class="iconify" data-icon="akar-icons:book"></span>', title: 'Documentation', content: 'Thorough and readable documentation. We understand that bad documentation is the worst. All of our components and fully documented, with support for all levels of experience. ' },
+  { icon: '<span class="iconify" data-icon="akar-icons:book"></span>', title: 'Scalable design system', content: 'Thorough and readable documentation. We understand that bad documentation is the worst. All of our components and fully documented, with support for all levels of experience. ' },
   { icon: '<span class="iconify" data-icon="bx:paint"></span>', title: 'Customisation', content: 'Adding your own touch to a component library can be hard. Building out a design system is even harder. Unlocked is here to help you with both.' },
 ]
 
@@ -22,80 +22,131 @@ const communityRow = [
       subtitle="What does Unlocked offer?"
     />
     <div class="w-100 py-8">
-      <div class="w-full grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4">
+      <div class="flex flex-row">
+        <div class="border border-layoutBorder rounded-md bg-layoutContrast px-4 py-4 flex flex-col">
+          <USubtitle class="mb-2">
+            Open source
+          </USubtitle>
+          <UBody>
+            Digital brilliance and open source magic. The best of both worlds.
+          </UBody>
+        </div>
+        <div class="border border-layoutBorder rounded-md bg-layoutContrast px-4 py-4 ml-2 flex flex-col">
+          <USubtitle class="mb-2">
+            Open source
+          </USubtitle>
+          <UBody>
+            Digital brilliance and open source magic. The best of both worlds.
+          </UBody>
+        </div>
+      </div>
+      <!-- <div class="w-full grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4">
         <ul class="list-disc list-inside col-span-2">
-          <li class="mb-2">
+          <li class="mb-2 text-text">
             Open source
           </li>
-          <li class="mb-2">
+          <li class="mb-2 text-text">
             30+ UI components
           </li>
-          <li class="mb-2">
+          <li class="mb-2 text-text">
             Storybook implementation
           </li>
-          <li class="mb-2">
+          <li class="mb-2 text-text">
             Thorough documentation
           </li>
         </ul>
 
         <ul class="list-disc list-inside col-span-2">
-          <li class="mb-2">
+          <li class="mb-2 text-text">
             Beginner friendly
           </li>
-          <li class="mb-2">
+          <li class="mb-2 text-text">
             Web3 support
           </li>
-          <li class="mb-2">
+          <li class="mb-2 text-text">
             Tree shakable
           </li>
-          <li class="mb-2">
+          <li class="mb-2 text-text">
             Transparent processes
           </li>
         </ul>
 
         <ul class="list-disc list-inside col-span-2">
-          <li class="mb-2">
+          <li class="mb-2 text-text">
             Design tokens
           </li>
-          <li class="mb-2">
+          <li class="mb-2 text-text">
             Theme switching
           </li>
-          <li class="mb-2">
+          <li class="mb-2 text-text">
             Utility class based
           </li>
-          <li class="mb-2">
+          <li class="mb-2 text-text">
             Easily customisable
           </li>
         </ul>
 
         <ul class="list-disc list-inside col-span-2">
-          <li class="mb-2">
+          <li class="mb-2 text-text">
             Continuous support
           </li>
-          <li class="mb-2">
+          <li class="mb-2 text-text">
             Vue3 support
           </li>
-          <li class="mb-2">
+          <li class="mb-2 text-text">
             Minimal package size
           </li>
-          <li class="mb-2">
+          <li class="mb-2 text-text">
             Updated Figma UI kit
           </li>
         </ul>
-      </div>
+      </div> -->
     </div>
   </div>
 
-  <div class="mx-auto max-w-screen-lg px-4 py-12 sm:px-6 lg:py-24 lg:px-8">
-    <div class="lg:flex lg:items-center lg:justify-between text-center">
-      <h1 class="text-2xl lg:text-5xl px-6 lg:px-24 md:leading-tight">
-        We understand the trade offs that using an open source design system comes with. We can work with you here.
+  <!-- <div class="mx-auto max-w-screen-lg px-4 py-12 sm:px-6 lg:py-24 lg:px-8">
+    <div class="lg:flex w-full lg:items-center lg:justify-between">
+      <h1 class="text-2xl lg:text-5xl px-6  font-bold">
+        Unlocking your future design system
       </h1>
     </div>
-  </div>
+  </div> -->
 
   <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:py-16 lg:px-8">
-    <InfoRow :items="featuresRow" />
+    <SectionHeader
+      title="Changing the future of component libraries"
+      subtitle="Why should we use Unlocked?"
+    />
+    <div class="flex w-100 items-center justify-between mx-auto lg:py-16">
+      <InfoRow :items="featuresRow" />
+    </div>
+  </div>
+
+  <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:pb-16 lg:pt-0 lg:px-8">
+    <SectionHeader
+      title="Our components"
+      subtitle="Component variety"
+    />
+    <div class="w-100 py-8">
+      <div class="flex flex-row">
+        <div class="border border-layoutBorder rounded-md bg-layoutContrast px-4 py-4 flex flex-col">
+          <USubtitle class="mb-2">
+            Open source
+          </USubtitle>
+          <UBody>
+            Digital brilliance and open source magic. The best of both worlds.
+          </UBody>
+        </div>
+        <div class="border border-layoutBorder rounded-md bg-layoutContrast px-4 py-4 ml-2 flex flex-col">
+          <USubtitle class="mb-2">
+            Open source
+          </USubtitle>
+          <UBody>
+            Digital brilliance and open source magic. The best of both worlds.
+          </UBody>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:py-16 lg:px-8">

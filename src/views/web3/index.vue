@@ -17,9 +17,9 @@ const items = [
     <!-- <div class="absolute w-50">
     <img class="h-50 w-auto" src="/logo-icon-web3.svg"/>
   </div> -->
-    <u-headline>Unlocked Web3</u-headline>
-    <u-subtitle class="mt-2">
-      A selection of Web3 components and guides to help get your application going.
+    <u-headline>Web3</u-headline>
+    <u-subtitle class="mt-2 text-gray-400">
+      Our web3 components and utilities.
     </u-subtitle>
   </div>
 

@@ -1,4 +1,4 @@
-const tokens = require('@unlocked/foundation/tokens')
+// const tokens = require('@unlocked/foundation/tokens')
 
 // TODO: Look for a better way to handle Tailwind's purge
 
@@ -10,7 +10,21 @@ module.exports = {
       sans: ['"Inter var"'],
     },
     extend: {
-      ...tokens,
+      colors: {
+        text: '#FFFFFF',
+        primary: '#FFFFFF',
+        layoutBackground: '#fbfbfb',
+        error: '#cf2121',
+        warning: '#ffcc00',
+        success: '#169d00',
+        textContrast: '#000000',
+        background: '#000000',
+        layoutHover: '#FFFFFF',
+        layoutBorder: '#1c1c1c',
+        layoutContrast: '#0d0d0d',
+        layoutHeavyContrast: '#FFFFFF',
+        link: '#0068c8',
+      },
     },
   },
   plugins: [

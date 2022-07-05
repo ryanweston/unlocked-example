@@ -24,7 +24,7 @@ const prop = defineProps<Props>()
       </div>
 
       <!-- Body -->
-      <p class="mt-2">
+      <p class="mt-2 text-gray-400">
         {{ item.content }}
       </p>
     </div>
