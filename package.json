@@ -18,7 +18,7 @@
   "dependencies": {
     "@mdi/js": "^6.6.95",
     "@unlocked/foundation": "^0.9.9",
-    "@vueuse/core": "^8.2.4",
+    "@vueuse/core": "^8.9.4",
     "equal-vue": "^0.79.3",
     "vue": "^3.2.29",
     "vue-router": "^4.0.12"
