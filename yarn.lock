@@ -1292,14 +1292,6 @@
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.7.tgz#1d572bfbbe14b7704e0ba0f39b74815b84870d70"
   integrity sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==
 
-"@emdgroup-liquid/liquid@^2.3.1":
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/@emdgroup-liquid/liquid/-/liquid-2.4.1.tgz#c99fe0d0fbd05242e374c2bc0270def32fedcecb"
-  integrity sha512-wnTMFpfa/ky+MzdAgobdi4FHXdVQgQZ1pEpTFPn5rgLHshx9naahFoy1gvSc4iTH9Mbhf2KW7y5qJRK/iNt9GQ==
-  dependencies:
-    "@stencil/core" "^2.16.1"
-    tether "^2.0.0"
-
 "@eslint/eslintrc@^1.0.5":
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-1.3.0.tgz#29f92c30bb3e771e4a2048c95fa6855392dfac4f"
@@ -1335,12 +1327,17 @@
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.3.tgz#555193ab2e3bb3b6adc3d551c9c030d9e860daf6"
   integrity sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==
 
+"@headlessui/vue@^1.0.0":
+  version "1.6.7"
+  resolved "https://registry.yarnpkg.com/@headlessui/vue/-/vue-1.6.7.tgz#433b86e5f86203606e7ac4851777173a327dd8c4"
+  integrity sha512-5sTCBpkUoFE7zhANn/6Z+pf3PUA7MD6BBaTsJcQybq9E4fnNiMM9agOJI9meXbtcawE6Dm8EeB5A8HAJEnZCbQ==
+
 "@headlessui/vue@^1.4.3":
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/@headlessui/vue/-/vue-1.5.0.tgz#8cd4877d3d344e482073a04ae8e3b7f987bb267c"
   integrity sha512-jAp6XYpqdEv32xhszaj5ejvjaX5qhu20sCbxu7lplePEfZL+4ffabivJBBTZAiPWczqAXmnZWNWG5DOyqjRa4w==
 
-"@heroicons/vue@^1.0.5":
+"@heroicons/vue@^1.0.5", "@heroicons/vue@^1.0.6":
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/@heroicons/vue/-/vue-1.0.6.tgz#d8b90734b436eb5a87f40cc300b64a0fb0031f7f"
   integrity sha512-ng2YcCQrdoQWEFpw+ipFl2rZo8mZ56v0T5+MyfQQvNqfKChwgP6DMloZLW+rl17GEcHkE3H82UTAMKBKZr4+WA==
@@ -1578,11 +1575,6 @@
   dependencies:
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
-
-"@stencil/core@^2.16.1":
-  version "2.17.1"
-  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-2.17.1.tgz#c0fd74d2991c2ea9d7e382017726bfd01009a05c"
-  integrity sha512-ErjQsNALgZQ9SYeBHhqwL1UO+Zbptwl3kwrRJC2tGlc3G/T6UvPuaKr+PGsqI+CZGia+0+R5EELQvFu74mYeIg==
 
 "@storybook/addon-actions@6.5.9", "@storybook/addon-actions@^6.5.9":
   version "6.5.9"
@@ -2860,12 +2852,14 @@
     "@typescript-eslint/types" "5.19.0"
     eslint-visitor-keys "^3.0.0"
 
-"@unlocked/foundation@^0.9.92-beta.0":
-  version "0.9.92-beta.0"
-  resolved "https://registry.yarnpkg.com/@unlocked/foundation/-/foundation-0.9.92-beta.0.tgz#7d2e0849efe662e7174a41c0a2698099ea543075"
-  integrity sha512-2ezAKaCHGO5X8q2PgzQZMmtD6HAr8QsBLBwdD8xmn6+3paPag+99afJNoazHnVlWDw4FGkqkKZs+jh31o87DZw==
+"@unlocked/foundation@^0.9.92-beta.4":
+  version "0.9.92-beta.4"
+  resolved "https://registry.yarnpkg.com/@unlocked/foundation/-/foundation-0.9.92-beta.4.tgz#bb724a8890551f5f1a62d48c0f5610abac1a6710"
+  integrity sha512-jQEG7nZdBhHLjTTctpAKdWq3fpewqP1iLcujfTwevb16wwKUUwzxV3FRxJSQhFJ9qrZVhqT5U0mmJKKhrqCGqA==
   dependencies:
-    "@emdgroup-liquid/liquid" "^2.3.1"
+    "@headlessui/vue" "^1.0.0"
+    "@heroicons/vue" "^1.0.6"
+    "@mdi/js" "^6.6.95"
 
 "@vitejs/plugin-react@^2.0.0-beta.1":
   version "2.0.0"
@@ -11505,11 +11499,6 @@ test-exclude@^6.0.0:
     "@istanbuljs/schema" "^0.1.2"
     glob "^7.1.4"
     minimatch "^3.0.4"
-
-tether@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/tether/-/tether-2.0.0.tgz#8ccb03992e71e2e913e6b1d4feb6be8cb49a4f79"
-  integrity sha512-iAkyBhwILpLIvkwzO5w5WUBtpYwxvzLRTO+sbzF3Uy7X4zznsy73v2b4sOQHXE3CQHeSNtB/YMU2Nn9tocbeBQ==
 
 text-table@^0.2.0:
   version "0.2.0"
