@@ -1,15 +1,11 @@
 <script lang="ts" setup>
-interface Item {
+export interface Item {
   icon: string
   title: string
   content: string
 }
 
-interface Props {
-  items: Item[]
-}
-
-const prop = defineProps<Props>()
+const prop = defineProps<{ items: Item[] }>()
 </script>
 
 <template>
@@ -24,9 +20,9 @@ const prop = defineProps<Props>()
       </div>
 
       <!-- Body -->
-      <p class="mt-2 text-gray-400">
+      <u-body class="mt-2 text-layoutHeavyContrast">
         {{ item.content }}
-      </p>
+      </u-body>
     </div>
   </div>
 </template>

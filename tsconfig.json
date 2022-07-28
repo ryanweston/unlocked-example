@@ -30,6 +30,9 @@
     "noFallthroughCasesInSwitch": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "types": [
+      "vite/client"
+    ]
   },
   "include": [
     "src/**/*.vue",
@@ -38,6 +41,7 @@
     "src/**/*.js"
   ],
   "exclude": [
+    "prism.js",
     "node_modules"
   ]
 }

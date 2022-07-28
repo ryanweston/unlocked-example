@@ -2,6 +2,7 @@
   "extends": "@antfu",
   "ignorePatterns": [
       "node_modules",
-      "dist"
+      "dist",
+      "prism.js"
   ]
 }

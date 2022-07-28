@@ -10,14 +10,14 @@ import { mdiArrowLeft } from '@mdi/js'
         Your page could not be found
       </u-subtitle>
 
-      <UButton class="mt-12" href="/web3" type="text">
+      <u-button class="mt-12" href="/" type="text">
         <template #prefixIcon>
           <u-icon>
             {{ mdiArrowLeft }}
           </u-icon>
         </template>
         Back to homepage
-      </UButton>
+      </u-button>
     </div>
   </div>
 </template>

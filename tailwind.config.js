@@ -1,10 +1,8 @@
-// const tokens = require('@unlocked/foundation/tokens')
-
 // TODO: Look for a better way to handle Tailwind's purge
-
 /** @type {import("@types/tailwindcss/tailwind-config").TailwindConfig } */
+
 module.exports = {
-  content: ['./index.html', './node_modules/@unlocked/foundation/dist/**/**/**/*.{js,css}', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  content: ['./index.html', './node_modules/@unlocked/foundation/dist/esm/**/*.{js,css,ts,vue}', './src/**/*.{vue,js,ts,jsx,tsx}', './theme.js'],
   theme: {
     fontFamily: {
       sans: ['"Inter var"'],
@@ -13,7 +11,6 @@ module.exports = {
       colors: {
         text: '#FFFFFF',
         primary: '#FFFFFF',
-        layoutBackground: '#fbfbfb',
         error: '#cf2121',
         warning: '#ffcc00',
         success: '#169d00',
@@ -21,8 +18,9 @@ module.exports = {
         background: '#000000',
         layoutHover: '#FFFFFF',
         layoutBorder: '#1c1c1c',
-        layoutContrast: '#0d0d0d',
-        layoutHeavyContrast: '#FFFFFF',
+        layoutBackground: '#111111',
+        layoutContrast: '#1D1F23',
+        layoutHeavyContrast: '#5F5F5F',
         link: '#0068c8',
       },
     },

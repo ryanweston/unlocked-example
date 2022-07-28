@@ -1,26 +1,31 @@
 <script lang="ts" setup>
+import { useRouter } from 'vue-router'
 import Footer from './components/footer.vue'
 
+const router = useRouter()
+
 const dropdown = [
-  { text: 'Component library', href: 'https://github.com/UnlockedUI/unlocked-ui', iconSrc: '/logo-icon.svg' },
-  { text: 'Web3 components', href: '/web3', disabled: false, iconSrc: '/logo-icon-web3.svg' },
-  { text: 'Figma UI kit', href: 'https://www.figma.com/file/3RLpJ0ZEXlbIBYLTUtLaL9/Unlocked?node-id=0%3A1', disabled: false, iconSrc: '/images/figma.svg' },
+  { text: 'Component library', href: 'https://github.com/UnlockedUI/unlocked-ui', iconSrc: '/images/logo/logo-icon-dark.svg' },
+  { text: 'Figma kit', href: 'https://www.figma.com/file/3RLpJ0ZEXlbIBYLTUtLaL9/Unlocked?node-id=0%3A1', disabled: false, iconSrc: '/images/figma.svg' },
 ]
 
 const navigation = [
   { text: 'Documentation', href: 'http://docs.unlocked.to', size: 'small', type: 'text', external: true },
-  { text: 'Our mission', external: true, href: '/mission', size: 'small', type: 'text' },
-  { text: 'Roadmap', external: true, href: 'https://github.com/orgs/UnlockedUI/projects/1', size: 'small', type: 'text' },
+  { text: 'Our mission', route: '/mission', size: 'small', type: 'text' },
+  { text: 'Compositions', route: '/compositions', size: 'small', type: 'text' },
   { text: 'Products', href: 'https://github.com/orgs/UnlockedUI', size: 'small', type: 'text', items: dropdown },
   { text: 'Install Unlocked', href: '#', size: 'small', type: 'default', disabled: true, external: true },
 ]
+const visit = (href: string | undefined, route: string | undefined) => {
+  if (!href && route)
+    router.push(route)
+}
 </script>
 
 <template>
   <main class="bg-background">
     <div class="relative min-h-screen">
-      <!-- TODO: Fix mobile navigation  -->
-      <u-menu class="border-none" title="Unlocked" :navigation="navigation" logo="/logo-dark.svg" logo-href="/">
+      <u-menu class="border-none" title="Unlocked" :navigation="navigation" logo="/images/logo/logo-dark.svg" logo-href="/">
         <template #rightSide>
           <div v-for="item in navigation" :key="item.text">
             <u-dropdown
@@ -31,11 +36,11 @@ const navigation = [
 
             <u-button
               v-else
-              :external="item.external"
               :href="item.href"
-              :target="item.external ? '_blank' : ''"
               :size="item.size"
               :type="item.type"
+              :target="item.external ? '_blank' : ''"
+              @click="() => visit(item.href, item.route)"
             >
               {{ item.text }}
             </u-button>

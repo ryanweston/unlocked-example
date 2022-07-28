@@ -1,9 +1,14 @@
+<script lang="ts" setup>
+import { mdiArrowRight } from '@mdi/js'
+</script>
+
 <template>
   <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:py-36 lg:px-none">
     <div class="lg:flex lg:items-center lg:justify-between text-center">
       <u-headline>Build for the future & unlock your designs.</u-headline>
     </div>
 
+    <!-- TODO: Remove iconify and get svgs for these logos -->
     <div class="flex flex-col md:flex-row w-full md:items-center justify-center mx-auto py-16">
       <div class="flex flex-row justify-center md:justify-start items-center">
         <span class="iconify mr-3" data-icon="logos:figma" />
@@ -27,7 +32,6 @@
 
     <div class="flex w-100 flex-col sm:flex-row md:items-center md:justify-center mx-auto">
       <u-button
-        external
         size="large"
         type="secondary"
         href="https://github.com/UnlockedUI/unlocked-ui"
@@ -40,6 +44,11 @@
       </u-button>
       <u-button size="large" class="mt-2 sm:ml-4 sm:mt-0">
         Start using Unlocked
+        <template #appendIcon>
+          <u-icon>
+            {{ mdiArrowRight }}
+          </u-icon>
+        </template>
       </u-button>
     </div>
   </div>
