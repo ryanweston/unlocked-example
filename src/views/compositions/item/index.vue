@@ -36,7 +36,7 @@ const url = `../../../compositions/${route.meta.path}/`
 
 // Dynamically import the component documentation
 onMounted(async() => {
-  const index = ((await import(`${url}index.ts`)).default) as IDocumentation
+  const index = ((await import(`../../../compositions/${route.meta.path}/index.ts`)).default) as IDocumentation
   documentation.value = index
 
   if (documentation.value.hasClasses)
@@ -44,15 +44,15 @@ onMounted(async() => {
 })
 
 const ClassesMD = defineAsyncComponent(() =>
-  import(`${url}code/classes.md`),
+  import(`../../../compositions/${route.meta.path}/code/classes.md`),
 )
 
 const CodeMD = defineAsyncComponent(() =>
-  import(`${url}component.md`),
+  import(`../../../compositions/${route.meta.path}/component.md`),
 )
 
 const isComponent = defineAsyncComponent(() =>
-  import(`${url}wrapper.vue`),
+  import(`../../../compositions/${route.meta.path}/wrapper.vue`),
 )
 </script>
 
