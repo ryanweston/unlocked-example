@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 import { useRouter } from 'vue-router'
 import type { ButtonProps } from '@unlocked/base'
-import Footer from '@/components/Footer.vue'
-import Navigation from '@/components/navigation/Navigation.vue'
-import Dropdown from '@/components/dropdown/Dropdown.vue'
+import Dropdown from '@/components/dropdown/dropdown.vue'
+import Footer from '@/components/footer.vue'
+import Navigation from '@/components/navigation/navigation.vue'
 
 const router = useRouter()
 

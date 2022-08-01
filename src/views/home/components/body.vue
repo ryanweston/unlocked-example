@@ -4,7 +4,7 @@ import { Carousel, Navigation, Slide } from 'vue3-carousel'
 import { mdiArrowRight, mdiBookshelf, mdiBrush, mdiHandCoin, mdiLanguageTypescript, mdiPuzzle, mdiTailwind } from '@mdi/js'
 import 'vue3-carousel/dist/carousel.css'
 import InfoRow from './info-row.vue'
-import SectionHeader from '@/components/SectionHeader.vue'
+import SectionHeader from '@/components/sectionHeader.vue'
 
 const featuresRow = [
   { icon: '<span class="iconify" data-icon="charm:rocket"></span>', title: 'Next generation', content: 'We want to help enable the next generation of web. Our components should and will be fully compatible and supported with any current and future web3 advancements.' },
