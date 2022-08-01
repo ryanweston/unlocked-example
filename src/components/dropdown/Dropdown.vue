@@ -1,12 +1,12 @@
 <script lang="ts" setup>
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { ChevronDownIcon } from '@heroicons/vue/solid'
-import { UButton, UIcon, withTheme } from '@unlocked/foundation'
+import { UButton, UIcon, withTheme } from '@unlocked/base'
 
 export interface Item {
-  text: string
+  text?: string
   active?: boolean
-  class?: string
+  class?: string | string[]
   disabled?: boolean
   type?: string
   href?: string
@@ -16,10 +16,8 @@ export interface Item {
 
 export interface DropdownProps {
   text?: string
-  items: Array<Item>
+  items?: Array<Item>
 }
-
-const emit = defineEmits(['click'])
 
 const props = defineProps<DropdownProps>()
 
@@ -29,7 +27,7 @@ const classes: any = styles
 </script>
 
 <script lang="ts">
-export default { name: 'UDropdown' }
+export default { name: 'Dropdown' }
 </script>
 
 <template>
@@ -55,22 +53,15 @@ export default { name: 'UDropdown' }
             <div v-for="item in items" :key="item.text">
               <MenuItem v-slot="{ active }" as="div" :disabled="item.disabled">
                 <slot :active="active" :item="item">
-                  <!-- Can be abstracted into dropdown item component  -->
                   <a
-                    :class="[classes.dropdownItem]"
+                    :class="classes.dropdownItem"
                     :href="item.href"
                     :target="item.target"
-                    @click="e => emit('click', e)"
                   >
-                    <div v-if="$slots.prefixIcon" class="mr-3 w-4 h-4">
-                      <slot name="prefixIcon" />
+                    <div v-if="item.iconSrc" class="mr-3 w-4 h-4">
+                      <UIcon :src="item.iconSrc" />
                     </div>
-                    <slot>
-                      {{ props.text }}
-                    </slot>
-                    <div v-if="$slots.appendIcon" class="ml-3 w-4 h-4">
-                      <slot name="appendIcon" />
-                    </div>
+                    {{ item.text }}
                   </a>
                 </slot>
               </MenuItem>

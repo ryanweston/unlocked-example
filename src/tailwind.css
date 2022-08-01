@@ -4,7 +4,11 @@
 
 
 body { 
-  @apply text-text;
+  @apply text-textOne;
+}
+
+.slider_img_wrapper:hover .slider_img { 
+  @apply bg-interactiveLink
 }
 
 .slider_img { 

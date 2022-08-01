@@ -14,13 +14,13 @@ const prop = defineProps<{ items: Item[] }>()
       <!-- Title -->
       <div class="flex flex-row items-center font-bold text-lg">
         <div v-html="item.icon" />
-        <h3 class="font-bold text-lg ml-2">
+        <u-headline :size="6" class="ml-2">
           {{ item.title }}
-        </h3>
+        </u-headline>
       </div>
 
       <!-- Body -->
-      <u-body class="mt-2 text-layoutHeavyContrast">
+      <u-body class="mt-2 text-textTwo">
         {{ item.content }}
       </u-body>
     </div>

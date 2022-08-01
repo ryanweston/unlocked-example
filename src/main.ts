@@ -1,16 +1,17 @@
 import { createApp } from 'vue'
 import './tailwind.css'
 import { createRouter, createWebHistory } from 'vue-router'
-import { Unlocked, componentThemes, createTheme, tokenMap } from '@unlocked/foundation'
+import { defaultTheme, unlocked } from '@unlocked/base'
 import App from './App.vue'
 import { routes } from './routes'
-import './prism.js'
-
-import { theme } from '../theme.js'
+import navigation from '@/components/navigation/classes'
+import dropdown from '@/components/dropdown/classes'
 
 const app = createApp(App)
 
-app.use(Unlocked, { theme })
+const theme = { ...defaultTheme, ...dropdown, ...navigation }
+
+app.use(unlocked, { theme })
 
 const router = createRouter({
   history: createWebHistory(),

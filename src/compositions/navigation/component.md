@@ -1,39 +1,25 @@
-``` javascript
+```html
 <script lang="ts" setup>
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { MenuIcon, XIcon } from '@heroicons/vue/outline'
-import { UButton } from '@/components/button'
-import { UMenuItem } from '@/components/menu-item'
-
-import { withTheme } from '@/theme'
-
-// Use Button types here to avoid repitition
-export interface Items {
-  text: string
-  href?: string
-  size?: string
-  type?: string
-  iconSrc?: string
-  disabled?: boolean
-  external?: boolean
-  items?: Array<Items>
-}
+import { UButton, UHeadline, withTheme } from '@unlocked/base'
+import type { ButtonProps } from '@unlocked/base'
 
 export interface MenuProps {
-  navigation?: Array<Items>
-  title?: string
+  items?: Array<ButtonProps>
   logo?: string
   logoHref?: string
+  brand?: string
 }
 
 const props = defineProps<MenuProps>()
 
-const styles = withTheme('menu')
+const styles = withTheme('navigation')
 const classes = styles
 </script>
 
 <script lang="ts">
-export default { name: 'u-menu' }
+export default { name: 'Navigation' }
 </script>
 
 <template>
@@ -76,9 +62,9 @@ export default { name: 'u-menu' }
                 </a>
               </template>
               <a v-else :href="props.logoHref">
-                <h3 :class="classes.logo.text">
-                  Unlocked
-                </h3>
+                <UHeadline :size="4" :class="classes.logo.text">
+                  {{ brand }}
+                </UHeadline>
               </a>
             </slot>
           </div>
@@ -89,13 +75,15 @@ export default { name: 'u-menu' }
           <div :class="classes.screenMenuContainer">
             <slot name="rightSide">
               <UButton
-                v-for="item in navigation"
+                v-for="item in items"
                 :key="item.text"
+                :disabled="item.disabled"
+                :href="item.href"
                 :size="item.size"
                 :type="item.type"
-              >
-                {{ item.text }}
-              </UButton>
+                :target="item.target"
+                :text="item.text"
+              />
             </slot>
           </div>
         </div>
@@ -103,19 +91,19 @@ export default { name: 'u-menu' }
     </div>
 
     <!-- Mobile dropdown -->
-    <!-- TODO: Add slots -->
     <DisclosurePanel :class="classes.mobileWrapper">
       <div :class="classes.mobileContainer">
         <slot name="mobileMenu">
-          <UMenuItem
-            v-for="item in navigation"
+          <UButton
+            v-for="item in items"
             :key="item.text"
-            :items="item.items"
-            :type="item.type"
+            :disabled="item.disabled"
             :href="item.href"
-          >
-            {{ item.text }}
-          </UMenuItem>
+            :size="item.size"
+            :type="item.type"
+            :target="item.target"
+            :text="item.text"
+          />
         </slot>
       </div>
     </DisclosurePanel>

@@ -3,7 +3,7 @@ import { useRoute } from 'vue-router'
 import { defineAsyncComponent, onMounted, ref } from 'vue'
 import type { Ref } from 'vue'
 import { useClipboard } from '@vueuse/core'
-import { mdiArrowLeft, mdiClipboardFileOutline, mdiCodeTags, mdiEye } from '@/utils/icons'
+import { mdiArrowLeft, mdiArrowRight, mdiClipboardFileOutline, mdiCodeTags, mdiEye } from '@/utils/icons'
 import type { IDocumentation } from '@/utils/types'
 
 type ActiveState = 'component' | 'classes' | 'code'
@@ -31,12 +31,11 @@ const copyContent = (callback: Function) => {
   callback(3000)
 }
 
-// Use route information to get dynamic content url
-const url = `../../../compositions/${route.meta.path}/`
-
 // Dynamically import the component documentation
 onMounted(async() => {
+  await import ('../../../prism.js')
   const index = ((await import(`../../../compositions/${route.meta.path}/index.ts`)).default) as IDocumentation
+
   documentation.value = index
 
   if (documentation.value.hasClasses)
@@ -58,7 +57,7 @@ const isComponent = defineAsyncComponent(() =>
 
 <template>
   <!-- Header section -->
-  <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:pt-14 lg:pb-6 lg:px-8">
+  <div class="mx-auto max-w-screen-xl px-4 pb-2 py-12 sm:px-6 lg:pt-14 lg:pb-6 lg:px-8">
     <u-button class="mb-12" href="/compositions" type="text">
       <template #prefixIcon>
         <u-icon>
@@ -67,44 +66,47 @@ const isComponent = defineAsyncComponent(() =>
       </template>
       Back to components
     </u-button>
-    <u-title>{{ route.meta.title }}</u-title>
-    <u-subtitle class="text-layoutHeavyContrast mt-2">
+    <u-headline :size="3">
+      {{ route.meta.title }}
+    </u-headline>
+    <u-subtitle class="text-textTwo mt-2">
       {{ route.meta.subtitle }}
     </u-subtitle>
   </div>
 
   <!-- Navigation & tools section -->
   <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:pt-6 lg:pb-14 lg:px-8">
-    <div class="flex flex-row w-full">
-      <u-button group first :active="activeTab === 'component'" @click="() => {changeStatus('component')}">
-        <template #prefixIcon>
-          <u-icon>
-            {{ mdiEye }}
-          </u-icon>
-        </template>
-        Preview
-      </u-button>
-      <u-button v-if="hasClasses" group :active="activeTab === 'classes'" @click="() => {changeStatus('classes')}">
-        <template #prefixIcon>
-          <u-icon>
-            {{ mdiEye }}
-          </u-icon>
-        </template>
-        Classes
-      </u-button>
-      <u-button group last :active="activeTab === 'code'" @click="() => {changeStatus('code')}">
-        <template #prefixIcon>
-          <u-icon>
-            {{ mdiCodeTags }}
-          </u-icon>
-        </template>
-        Code
-      </u-button>
-
-      <u-tooltip class="ml-auto">
+    <div class="flex flex-col md:flex-row w-full">
+      <div class="flex flex-row">
+        <u-button group first :active="activeTab === 'component'" @click="() => {changeStatus('component')}">
+          <template #prefixIcon>
+            <u-icon>
+              {{ mdiEye }}
+            </u-icon>
+          </template>
+          Preview
+        </u-button>
+        <u-button v-if="hasClasses" group :active="activeTab === 'classes'" @click="() => {changeStatus('classes')}">
+          <template #prefixIcon>
+            <u-icon>
+              {{ mdiEye }}
+            </u-icon>
+          </template>
+          Classes
+        </u-button>
+        <u-button group last :active="activeTab === 'code'" @click="() => {changeStatus('code')}">
+          <template #prefixIcon>
+            <u-icon>
+              {{ mdiCodeTags }}
+            </u-icon>
+          </template>
+          Code
+        </u-button>
+      </div>
+      <u-tooltip top class="hidden md:flex ml-auto">
         <template #activator="{reveal}">
           <u-button
-            type="alternate"
+            type="variant"
             @click="() => { copyContent(reveal)}"
           >
             <u-icon>
@@ -117,47 +119,57 @@ const isComponent = defineAsyncComponent(() =>
     </div>
 
     <!-- Display section  -->
-    <div class="mt-8 h-96 w-full rounded-md overflow-scroll border border-layoutBorder bg-grey resize-y">
-      <div v-if="activeTab === 'component'" class="flex items-center justify-center bg-layoutBackground h-full">
+    <div class="mt-8 h-96 w-full rounded-md overflow-scroll resize-y">
+      <div v-if="activeTab === 'component'" class="flex items-center justify-center bg-interfaceOne h-full">
         <component :is="isComponent" v-show="activeTab === 'component'" />
       </div>
 
-      <div v-if="activeTab === 'classes'">
+      <div v-show="activeTab === 'classes'">
         <div ref="classesText">
-          <ClassesMD v-show="activeTab === 'classes'" />
+          <ClassesMD />
         </div>
       </div>
 
-      <div v-if="activeTab === 'code'">
+      <div v-show="activeTab === 'code'">
         <div ref="codeText">
-          <CodeMD v-show="activeTab === 'code'" />
+          <CodeMD />
         </div>
       </div>
     </div>
 
     <!-- Documentation section -->
-    <div v-if="documentation" class="grid grid-cols-6 gap-8 mt-10">
+    <div v-if="documentation" class="grid grid-cols-1 md:grid-cols-6 mdgap-8 mt-10">
       <div class="rounded-lg py-6 col-span-4">
         <div v-for="(section, index) in documentation.content" :key="section.title" class="">
-          <u-subtitle :class="[index >= 1 ? 'mt-6' : '']">
+          <u-headline :size="5" :class="[index >= 1 ? 'mt-6' : '']">
             {{ section.title }}
-          </u-subtitle>
+          </u-headline>
 
-          <u-subtitle class="text-layoutHeavyContrast mt-4">
+          <u-subtitle class="text-textTwo mt-4">
             {{ section.content }}
           </u-subtitle>
         </div>
       </div>
-      <div class="flex flex-col px-6 py-6 rounded-lg col-span-2">
+
+      <!-- Packages & information  -->
+      <div class="flex flex-col md:pl-8 py-6 rounded-lg col-span-2 w-100">
         <template v-if="documentation.packages">
           <template v-for="(pkg, index) in documentation.packages" :key="index">
-            <div :class="[index >= 1 ? 'mt-2' : '', 'bg-layoutBackground px-4 py-2 rounded-lg font-medium']">
-              <u-body class="text-layoutHeavyContrast">
+            <div :class="[index >= 1 ? 'mt-2' : '', 'w-100 md:w-auto bg-interfaceOne px-4 py-2 rounded-lg font-medium']">
+              <u-body class="text-textOne">
                 {{ pkg }}
               </u-body>
             </div>
           </template>
         </template>
+        <div v-if="hasClasses" class="mt-5">
+          <u-button type="text" href="https://docs.unlocked.to">
+            View official documentation
+            <template #appendIcon>
+              <u-icon>{{ mdiArrowRight }}</u-icon>
+            </template>
+          </u-button>
+        </div>
       </div>
     </div>
   </div>

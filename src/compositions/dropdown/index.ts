@@ -2,7 +2,7 @@ import type { IDocumentation } from '@/utils/types'
 
 const content: IDocumentation = {
   hasClasses: true,
-  packages: ['@headless-ui', '@headless-ui', '@headless-ui'],
+  packages: ['@unlocked/base', '@headless-ui', '@heroicons/vue'],
   content: [
     {
       title: 'Overview',

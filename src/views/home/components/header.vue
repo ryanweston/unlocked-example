@@ -5,7 +5,9 @@ import { mdiArrowRight } from '@mdi/js'
 <template>
   <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:py-36 lg:px-none">
     <div class="lg:flex lg:items-center lg:justify-between text-center">
-      <u-headline>Build for the future & unlock your designs.</u-headline>
+      <u-headline class="text-4xl sm:text-6xl md:text-6xl">
+        Build for the future & unlock your designs.
+      </u-headline>
     </div>
 
     <!-- TODO: Remove iconify and get svgs for these logos -->

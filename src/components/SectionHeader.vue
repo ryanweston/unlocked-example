@@ -8,11 +8,11 @@ const props = defineProps<{
 
 <template>
   <div class="max-w-md">
-    <u-subtitle class="text-gray-400">
+    <u-subtitle class="text-textTwo">
       {{ subtitle }}
     </u-subtitle>
-    <u-title>
+    <u-headline :size="3">
       {{ title }}
-    </u-title>
+    </u-headline>
   </div>
 </template>
