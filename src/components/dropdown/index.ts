@@ -1,3 +1,3 @@
-import dropdown from './dropdown.vue'
+import component from './dropdown.vue'
 
-export { dropdown as Dropdown }
+export { component as dropdown }

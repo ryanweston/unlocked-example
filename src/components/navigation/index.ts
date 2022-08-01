@@ -1,3 +1,3 @@
-import navigation from './navigation.vue'
+import component from './navigation.vue'
 
-export { navigation as Navigation }
+export { component as navigation }
