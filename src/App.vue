@@ -2,8 +2,8 @@
 import { useRouter } from 'vue-router'
 import type { ButtonProps } from '@unlocked/base'
 // import dropdown from '@/components/dropdown/dropdown.vue'
-import Footer from '@/components/footer.vue'
-import navigation from '@/components/navigation.vue'
+import Footer from '@/components/Footer.vue'
+import Navigation from '@/components/Navigation.vue'
 
 const router = useRouter()
 
@@ -33,7 +33,7 @@ const visit = (href: string | undefined, route: string | undefined) => {
 <template>
   <main class="bg-interfacePage overflow-hidden">
     <div class="relative min-h-screen">
-      <navigation class="border-none" :items="navigationItems" logo="/images/logo/logo-dark.svg" logo-href="/">
+      <Navigation class="border-none" :items="navigationItems" logo="/images/logo/logo-dark.svg" logo-href="/">
         <template #rightSide>
           <div v-for="item in navigationItems" :key="item.text">
             <!-- <Dropdown
@@ -53,7 +53,7 @@ const visit = (href: string | undefined, route: string | undefined) => {
             </u-button>
           </div>
         </template>
-      </navigation>
+      </Navigation>
       <router-view />
       <Footer />
     </div>
