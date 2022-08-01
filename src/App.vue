@@ -3,7 +3,7 @@ import { useRouter } from 'vue-router'
 import type { ButtonProps } from '@unlocked/base'
 // import dropdown from '@/components/dropdown/dropdown.vue'
 import Footer from '@/components/footer.vue'
-import { navigation } from '@/components/navigation'
+import navigation from '@/components/navigation.vue'
 
 const router = useRouter()
 

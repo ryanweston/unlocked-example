@@ -17,10 +17,6 @@ const styles = withTheme('navigation')
 const classes = styles
 </script>
 
-<script lang="ts">
-export default { name: 'Navigation' }
-</script>
-
 <template>
   <Disclosure
     v-slot="{ open }"
