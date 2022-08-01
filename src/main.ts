@@ -15,6 +15,7 @@ app.use(unlocked, { theme })
 
 const router = createRouter({
   history: createWebHistory(),
+  // @ts-expect-error typescript is weird
   routes,
 })
 
