@@ -2,15 +2,15 @@
 import { useRouter } from 'vue-router'
 import type { ButtonProps } from '@unlocked/base'
 import Footer from './components/footer.vue'
-import Navigation from './components/navigation/navigation.vue'
-// import Dropdown from './components/dropdown/dropdown.vue'
+import Navigation from '@/components/navigation/navigation.vue'
+import Dropdown from '@/components/dropdown/dropdown.vue'
 
 const router = useRouter()
 
-// const dropdownItems = [
-//   { text: 'Component library', href: 'https://github.com/UnlockedUI/unlocked-ui', iconSrc: '/images/logo/logo-icon-dark.svg', target: '_blank' },
-//   { text: 'Figma kit', href: 'https://www.figma.com/file/3RLpJ0ZEXlbIBYLTUtLaL9/Unlocked?node-id=0%3A1', disabled: false, iconSrc: '/images/figma.svg', target: '_blank' },
-// ]
+const dropdownItems = [
+  { text: 'Component library', href: 'https://github.com/UnlockedUI/unlocked-ui', iconSrc: '/images/logo/logo-icon-dark.svg', target: '_blank' },
+  { text: 'Figma kit', href: 'https://www.figma.com/file/3RLpJ0ZEXlbIBYLTUtLaL9/Unlocked?node-id=0%3A1', disabled: false, iconSrc: '/images/figma.svg', target: '_blank' },
+]
 
 interface INavigationItem extends ButtonProps {
   route?: string
@@ -36,11 +36,11 @@ const visit = (href: string | undefined, route: string | undefined) => {
       <Navigation class="border-none" :items="navigationItems" logo="/images/logo/logo-dark.svg" logo-href="/">
         <template #rightSide>
           <div v-for="item in navigationItems" :key="item.text">
-            <!-- <Dropdown
+            <Dropdown
               v-if="item.text === 'Products'"
               text="Products"
               :items="dropdownItems"
-            /> -->
+            />
 
             <u-button
               :href="item.href"

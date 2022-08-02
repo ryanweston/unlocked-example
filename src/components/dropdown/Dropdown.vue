@@ -34,7 +34,7 @@ const classes: any = styles
           type="text"
           size="small"
         >
-          {{ text }}
+          {{ props.text }}
           <template #appendIcon>
             <ChevronDownIcon class="h-5 w-5" aria-hidden="true" />
           </template>
@@ -46,7 +46,7 @@ const classes: any = styles
       <transition :enter-active-class="classes.transition.enterActiveClass" :enter-from-class="classes.transition.enterFromClass" :enter-to-class="classes.transition.enterToClass" :leave-active-class="classes.transition.leaveActiveClass" :leave-from-class="classes.transition.leaveFromClass" :leave-to-class="classes.transition.leaveToClass">
         <slot name="menu">
           <MenuItems :class="classes.menu">
-            <div v-for="item in items" :key="item.text">
+            <div v-for="item in props.items" :key="item.text">
               <MenuItem v-slot="{ active }" as="div" :disabled="item.disabled">
                 <slot :active="active" :item="item">
                   <a
