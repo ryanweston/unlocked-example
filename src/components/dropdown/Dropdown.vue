@@ -26,10 +26,6 @@ const styles = withTheme('dropdown')
 const classes: any = styles
 </script>
 
-<script lang="ts">
-export default { name: 'Dropdown' }
-</script>
-
 <template>
   <Menu v-slot="{ open }" as="div" :class="classes.wrapper">
     <MenuButton>
