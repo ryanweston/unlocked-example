@@ -9,10 +9,10 @@ const props = defineProps<{
 <template>
   <div class="max-w-md">
     <u-subtitle class="text-textTwo">
-      {{ subtitle }}
+      {{ props.subtitle }}
     </u-subtitle>
     <u-headline :size="3">
-      {{ title }}
+      {{ props.title }}
     </u-headline>
   </div>
 </template>
