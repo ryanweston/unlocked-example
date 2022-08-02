@@ -2,8 +2,8 @@
 import { useRouter } from 'vue-router'
 import type { ButtonProps } from '@unlocked/base'
 import Footer from './components/footer.vue'
-import Navigation from '@/components/navigation/navigation.vue'
-import Dropdown from '@/components/dropdown/dropdown.vue'
+import Navigation from './components/navigation/navigation.vue'
+import Dropdown from './components/dropdown/dropdown.vue'
 
 const router = useRouter()
 
