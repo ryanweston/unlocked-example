@@ -1,4 +1,4 @@
-import ItemPage from './item/index.vue'
+import ItemPage from '@/views/compositions/page/index.vue'
 import compositions from '@/compositions'
 
 // Generate routes for all available compositions
