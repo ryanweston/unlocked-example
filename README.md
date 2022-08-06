@@ -1,4 +1,4 @@
-# Unlocked website
+
 
 <p align="center">
   <a href="https://unlocked.to" target="_blank">
@@ -12,6 +12,7 @@
   </a>
 </p>
 
+# Unlocked website
 
 The landing page and website for the Unlocked component library and compositions.
 
