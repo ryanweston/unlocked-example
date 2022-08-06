@@ -16,11 +16,9 @@ export default defineConfig({
     Markdown(),
   ],
   resolve: {
-    alias: [
-      {
-        '@': path.resolve(__dirname, './src'),
-      },
-    ],
+    alias: {
+      '@': `${path.resolve(__dirname, 'src')}/`,
+    },
   },
   server: {
     open: true,
