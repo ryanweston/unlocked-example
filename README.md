@@ -6,8 +6,6 @@
   </a>
 </p>
 
-
-
 <p align="center">
   <a href="https://app.netlify.com/sites/unlocked-website/deploys">
     <img src="https://api.netlify.com/api/v1/badges/9243603b-eb9a-4116-8c01-a01d1a3228f8/deploy-status">
@@ -19,12 +17,12 @@ The landing page and website for the Unlocked component library and compositions
 
 The website features information regarding the product as well as a range of available component compositions that utilise the atomic components provided in [@unlocked/base](https://www.github.com/UnlockedUI/unlocked-ui).
 
-# 🚀 To the future
+## 🚀 Next steps
 I'll be looking to explore a better development environment and deployment process regarding the compositional components. This will most likely take the form of either a monorepo, allowing for a tighter scope & improved developer experience or a seperate package.
 
-# 🔧 Development & maintenance
+## 🔧 Development & maintenance
 
-## Commit style
+### Commit style
 Commit messages must conform to the to the [conventional commits format](https://www.conventionalcommits.org/en/v1.0.0/#summary).
 
 ```bash 
