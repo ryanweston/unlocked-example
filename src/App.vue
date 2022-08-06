@@ -1,22 +1,17 @@
 <script lang="ts" setup>
 import { useRouter } from 'vue-router'
 import type { ButtonProps } from '@unlocked/base'
-import Footer from './components/footer.vue'
-import Navigation from './components/navigation.vue'
-import Dropdown from './components/dropdown.vue'
+import Footer from '@/components/Footer.vue'
+import Navigation from '@/components/Navigation.vue'
+import Dropdown from '@/components/Dropdown.vue'
 
 const router = useRouter()
 
-const dropdownItems = [
-  { text: 'Component library', href: 'https://github.com/UnlockedUI/unlocked-ui', iconSrc: '/images/logo/logo-icon-dark.svg', target: '_blank' },
-  { text: 'Figma kit', href: 'https://www.figma.com/file/3RLpJ0ZEXlbIBYLTUtLaL9/Unlocked?node-id=0%3A1', disabled: false, iconSrc: '/images/figma.svg', target: '_blank' },
-]
-
 interface INavigationItem extends ButtonProps {
   route?: string
-  items?: Array<ButtonProps>
 }
 
+// Items for navigation links
 const navigationItems: Array<INavigationItem> = [
   { text: 'Documentation', href: 'http://docs.unlocked.to', size: 'small', type: 'text', target: '_blank' },
   { text: 'Our mission', href: '/mission', route: '/mission', size: 'small', type: 'text' },
@@ -24,6 +19,13 @@ const navigationItems: Array<INavigationItem> = [
   { text: 'Products', size: 'small', type: 'text' },
   { text: 'Install Unlocked', href: '#', size: 'small', type: 'primary', target: '_blank' },
 ]
+
+// Items for products navigation dropdown
+const dropdownItems = [
+  { text: 'Component library', href: 'https://github.com/UnlockedUI/unlocked-ui', iconSrc: '/images/logo/logo-icon-dark.svg', target: '_blank' },
+  { text: 'Figma kit', href: 'https://www.figma.com/community/file/1137715259744680631', disabled: false, iconSrc: '/images/figma.svg', target: '_blank' },
+]
+
 const visit = (href: string | undefined, route: string | undefined) => {
   if (!href && route)
     router.push(route)
@@ -43,6 +45,7 @@ const visit = (href: string | undefined, route: string | undefined) => {
             />
 
             <u-button
+              v-else
               :href="item.href"
               :size="item.size"
               :type="item.type"

@@ -57,7 +57,7 @@ const isComponent = defineAsyncComponent(() =>
 
 <template>
   <!-- Header section -->
-  <div class="mx-auto max-w-screen-xl px-4 pb-2 py-12 sm:px-6 lg:pt-14 lg:pb-6 lg:px-8">
+  <header class="mx-auto max-w-screen-xl px-4 pb-2 py-12 sm:px-6 lg:pt-14 lg:pb-6 lg:px-8">
     <u-button class="mb-12" href="/compositions" type="text">
       <template #prefixIcon>
         <u-icon>
@@ -72,7 +72,7 @@ const isComponent = defineAsyncComponent(() =>
     <u-subtitle class="text-textTwo mt-2">
       {{ route.meta.subtitle }}
     </u-subtitle>
-  </div>
+  </header>
 
   <!-- Navigation & tools section -->
   <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:pt-6 lg:pb-14 lg:px-8">
@@ -156,7 +156,7 @@ const isComponent = defineAsyncComponent(() =>
         <template v-if="documentation.packages">
           <template v-for="(pkg, index) in documentation.packages" :key="index">
             <div :class="[index >= 1 ? 'mt-2' : '', 'w-100 md:w-auto bg-interfaceOne px-4 py-2 rounded-lg font-medium']">
-              <u-body class="text-textOne">
+              <u-body class="text-textTwo">
                 {{ pkg }}
               </u-body>
             </div>

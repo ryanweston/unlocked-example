@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import type { Ref } from 'vue'
 import { onMounted, ref } from 'vue'
-import ListItem from './components/item.vue'
+import CompositionButton from '@/views/compositions/components/CompositionButton.vue'
 import CompositionItems from '@/compositions'
 
 type Icons = Record<string, string>
@@ -44,7 +44,7 @@ const getIcon = (name: string) => {
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-8">
         <template v-for="composition in category.items" :key="composition.name">
-          <ListItem :item="composition" />
+          <CompositionButton :item="composition" />
         </template>
       </div>
     </div>
