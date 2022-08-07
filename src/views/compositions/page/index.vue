@@ -33,6 +33,7 @@ const copyContent = (callback: Function) => {
 
 // Dynamically import the component documentation
 onMounted(async() => {
+  // @ts-expect-error not in ts!
   await import ('../../../prism.js')
   const index = ((await import(`../../../compositions/${route.meta.path}/index.ts`)).default) as IDocumentation
 
@@ -42,14 +43,17 @@ onMounted(async() => {
     hasClasses.value = true
 })
 
+// Classes file
 const ClassesMD = defineAsyncComponent(() =>
   import(`../../../compositions/${route.meta.path}/code/classes.md`),
 )
 
+// Code file
 const CodeMD = defineAsyncComponent(() =>
   import(`../../../compositions/${route.meta.path}/component.md`),
 )
 
+// Visual component file
 const isComponent = defineAsyncComponent(() =>
   import(`../../../compositions/${route.meta.path}/wrapper.vue`),
 )
@@ -107,6 +111,7 @@ const isComponent = defineAsyncComponent(() =>
         <template #activator="{reveal}">
           <u-button
             type="variant"
+            :disabled="activeTab === 'component'"
             @click="() => { copyContent(reveal)}"
           >
             <u-icon>
@@ -120,7 +125,7 @@ const isComponent = defineAsyncComponent(() =>
 
     <!-- Display section  -->
     <div class="mt-8 h-96 w-full rounded-md overflow-scroll resize-y">
-      <div v-if="activeTab === 'component'" class="flex items-center justify-center bg-interfaceOne h-full">
+      <div v-if="activeTab === 'component'" class="flex items-center justify-center bg-[#121212] h-full">
         <component :is="isComponent" v-show="activeTab === 'component'" />
       </div>
 
@@ -138,7 +143,7 @@ const isComponent = defineAsyncComponent(() =>
     </div>
 
     <!-- Documentation section -->
-    <div v-if="documentation" class="grid grid-cols-1 md:grid-cols-6 mdgap-8 mt-10">
+    <div v-if="documentation" class="grid grid-cols-1 md:grid-cols-6 md:gap-8 mt-10">
       <div class="rounded-lg py-6 col-span-4">
         <div v-for="(section, index) in documentation.content" :key="section.title" class="">
           <u-headline :size="5" :class="[index >= 1 ? 'mt-6' : '']">
