@@ -17,6 +17,10 @@ const styles = withTheme('navigation')
 const classes = styles
 </script>
 
+<script lang="ts">
+export default { name: 'Navigation' }
+</script>
+
 <template>
   <Disclosure
     v-slot="{ open }"
@@ -86,7 +90,6 @@ const classes = styles
     </div>
 
     <!-- Mobile dropdown -->
-    <!-- TODO: Add slots -->
     <DisclosurePanel :class="classes.mobileWrapper">
       <div :class="classes.mobileContainer">
         <slot name="mobileMenu">

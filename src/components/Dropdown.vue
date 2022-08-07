@@ -4,11 +4,8 @@ import { ChevronDownIcon } from '@heroicons/vue/solid'
 import { withTheme } from '@unlocked/base'
 
 export interface Item {
-  text?: string
-  active?: boolean
-  class?: string | string[]
   disabled?: boolean
-  type?: string
+  text?: string
   href?: string
   target?: string
   iconSrc?: string
@@ -24,6 +21,10 @@ const props = defineProps<DropdownProps>()
 const styles = withTheme('dropdown')
 
 const classes: any = styles
+</script>
+
+<script lang="ts">
+export default { name: 'Dropdown' }
 </script>
 
 <template>
