@@ -4,7 +4,7 @@ import { mdiArrowRight, mdiBookshelf, mdiBrush, mdiHandCoin, mdiLanguageTypescri
 import { Carousel, Navigation, Slide } from 'vue3-carousel'
 import 'vue3-carousel/dist/carousel.css'
 import InfoRow from '@/views/home/components/InfoRow.vue'
-import SectionHeader from '@/components/SectionHeader.vue'
+import SectionHeader from '@/views/home/components/SectionHeader.vue'
 
 const featuresRow = [
   { icon: '<span class="iconify" data-icon="bx:paint"></span>', title: 'Developer control', content: 'Our philosophy is to ensure as much control can be transferred into developer\'s hands as possible. All while maintaining the benefits of using a component library.' },
@@ -13,10 +13,10 @@ const featuresRow = [
 ]
 
 const components = [
-  { img: '/images/components/button.png', href: '' },
-  { img: '/images/components/typography.png', href: '' },
-  { img: '/images/components/dropdown.png', href: '' },
-  { img: '/images/components/button.png', href: '' },
+  { img: '/images/components/button.png', href: 'https://www.storybook.unlocked.to/?path=/story/components-button--primary' },
+  { img: '/images/components/typography.png', href: 'https://www.storybook.unlocked.to/?path=/story/components-headline--one' },
+  { img: '/images/components/tooltip.png', href: 'https://www.storybook.unlocked.to/?path=/story/components-tooltip--default' },
+  { img: '/images/components/link.png', href: 'https://www.storybook.unlocked.to/?path=/story/components-link--default' },
 ]
 
 const settings = {
@@ -52,7 +52,6 @@ const breakpoints = {
         </u-headline>
       </div>
 
-      <!-- TODO: Remove iconify and get svgs for these logos -->
       <div class="flex flex-col md:flex-row w-full md:items-center justify-center mx-auto py-16">
         <div class="flex flex-row justify-center md:justify-start items-center">
           <span class="iconify mr-3" data-icon="logos:figma" />
@@ -176,6 +175,8 @@ const breakpoints = {
         </div>
       </div>
     </section>
+
+    <UButton>WOw!</UButton>
 
     <section class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:pb-16 lg:pt-0 lg:px-8">
       <SectionHeader

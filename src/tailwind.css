@@ -8,11 +8,11 @@ body {
 }
 
 .slider_img_wrapper:hover .slider_img { 
-  @apply bg-interactiveLink
+  @apply border-4 border-interfaceTwo;
 }
 
 .slider_img { 
-  @apply rounded-md;
+  @apply rounded-lg border-4 border-transparent;
   width: 100%;
   height:auto;
 }
