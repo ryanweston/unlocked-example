@@ -125,7 +125,7 @@ const isComponent = defineAsyncComponent(() =>
 
     <!-- Display section  -->
     <div class="mt-8 h-96 w-full rounded-md overflow-scroll resize-y">
-      <div v-if="activeTab === 'component'" class="flex items-center justify-center bg-[#121212] h-full">
+      <div v-if="activeTab === 'component'" class="flex items-center justify-center bg-[#0D0D0D] h-full">
         <component :is="isComponent" v-show="activeTab === 'component'" />
       </div>
 
@@ -159,12 +159,18 @@ const isComponent = defineAsyncComponent(() =>
       <!-- Packages & information  -->
       <div class="flex flex-col md:pl-8 py-6 rounded-lg col-span-2 w-100">
         <template v-if="documentation.packages">
-          <template v-for="(pkg, index) in documentation.packages" :key="index">
-            <div :class="[index >= 1 ? 'mt-2' : '', 'w-100 md:w-auto bg-interfaceOne px-4 py-2 rounded-lg font-medium']">
-              <u-body class="text-textTwo">
-                {{ pkg }}
-              </u-body>
-            </div>
+          <u-headline :size="5" class="mb-2">
+            Packages
+          </u-headline>
+          <template v-for="pkg in documentation.packages" :key="pkg.name">
+            <a
+              :href="pkg.url"
+              class="mt-2 w-full rounded-lg bg-interfaceOne flex flex-row items-center py-2 px-6 rounded-lg group hover:bg-interactivePrimary"
+              target="_blank"
+            >
+              <u-body class="group-hover:text-textInverse">{{ pkg.name }}</u-body>
+              <u-icon class="text-textInverse hidden group-hover:block ml-auto">{{ mdiArrowRight }}</u-icon>
+            </a>
           </template>
         </template>
         <div v-if="hasClasses" class="mt-5">

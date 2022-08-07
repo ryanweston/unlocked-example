@@ -2,7 +2,11 @@ import type { IDocumentation } from '@/utils/types'
 
 const content: IDocumentation = {
   hasClasses: true,
-  packages: ['@unlocked/base', '@headless-ui', '@heroicons/vue'],
+  packages: [
+    { name: '@unlocked/base', url: 'https://www.npmjs.com/package/@unlocked/base' },
+    { name: '@headlessui/vue', url: 'https://www.npmjs.com/package/@headlessui/vue' },
+    { name: '@heroicons/vue', url: 'https://www.npmjs.com/package/@heroicons/vue' },
+  ],
   content: [
     {
       title: 'Overview',
