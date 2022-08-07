@@ -554,10 +554,10 @@
     "@typescript-eslint/types" "5.32.0"
     eslint-visitor-keys "^3.3.0"
 
-"@unlocked/base@^0.0.1-beta.9":
-  version "0.0.1-beta.9"
-  resolved "https://registry.yarnpkg.com/@unlocked/base/-/base-0.0.1-beta.9.tgz#c09165d7a83eb9bc418da141c223a7b4156f921c"
-  integrity sha512-ZOO+SUPhzwR6v+bcmIUbLvgdn7WEixe1j00q7s81iP6Wb1lpFzRzzLZ0kGUCTvW0J4rm0qQu/1RYomiS9EJ+Aw==
+"@unlocked/base@^0.0.1-beta.10":
+  version "0.0.1-beta.10"
+  resolved "https://registry.yarnpkg.com/@unlocked/base/-/base-0.0.1-beta.10.tgz#2b1ac42d6a8acc4e41541696858f4586250368fd"
+  integrity sha512-DKiTGRYj7fB6J3czfYkUUf1ctAsbISAx38FOvD1lxV3lLY4qLf5IyoqFBBjq15UzjV4SM16aMF0xUm7bGrndXQ==
   dependencies:
     "@headlessui/vue" "^1.0.0"
     "@heroicons/vue" "^1.0.6"
