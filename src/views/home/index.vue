@@ -176,8 +176,6 @@ const breakpoints = {
       </div>
     </section>
 
-    <UButton>WOw!</UButton>
-
     <section class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:pb-16 lg:pt-0 lg:px-8">
       <SectionHeader
         title="Base components"
