@@ -11,22 +11,24 @@
         What is Unlocked?
       </u-subtitle>
       <u-body class="py-2 text-textTwo">
-        Unlocked is a forward thinking, modern Tailwind based component library built for Vue3.
+        Unlocked is a forward thinking, modern Tailwind based atomic component library built for Vue3. We intend to
+        innovate to tackle the lack of control you have when using other large components libraries and mitigate the tradeoffs of using them.
       </u-body>
       <u-subtitle class="mt-8 font-semibold">
         Why build Unlocked?
       </u-subtitle>
       <u-body class="py-2 text-textTwo">
-        Unlocked was built with the aim to help provide a foundation for your design system and to enable developers and designers to be able to quickly prototype and build modern applications with ease.
+        Unlocked was built with the aim to help provide you with the benefits of using a component library, while also giving you more control and customisation options. This is particularly helpful when you want to scale your product into a design system!
       </u-body>
       <u-subtitle class="mt-8 font-semibold">
-        Aren't there other component libraries?
+        How do you intend on doing this?
       </u-subtitle>
       <u-body class="py-2 text-textTwo">
-        As we look to the future of the web, we're looking to provide tools for developers adopting new forward thinking web technologies such as Web3, AR & VR. We're adopting this ethos as we built out our
+        We follow the atomic design methodology and wrap headless UI components as atomic base components to provide you with the utility you expect from a component library. Our theming system can be completely controlled by you, allowing you to customise these components with ease.
+        We then seperate molecules and organisms into our own
         <u-link href="/compositions">
           compositional components.
-        </u-link>. These are components, inspired by TailwindUI and built with Unlocked, to help fast track your projects.
+        </u-link>. These are components, inspired by TailwindUI and built with Unlocked base components, to help fast track your projects with more control over complex components.
       </u-body>
     </div>
   </div>
