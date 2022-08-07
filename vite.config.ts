@@ -1,4 +1,4 @@
-import path from 'path'
+import { URL, fileURLToPath } from 'url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 // import { visualizer } from 'rollup-plugin-visualizer'
@@ -17,10 +17,10 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': `${path.resolve(__dirname, 'src')}`,
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
-  server: {
-    open: true,
-  },
+  // server: {
+  //   open: true,
+  // },
 })

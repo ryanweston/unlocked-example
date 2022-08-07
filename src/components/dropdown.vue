@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { ChevronDownIcon } from '@heroicons/vue/solid'
-import { UButton, UIcon, withTheme } from '@unlocked/base'
+import { withTheme } from '@unlocked/base'
 
 export interface Item {
   text?: string
@@ -30,7 +30,7 @@ const classes: any = styles
   <Menu v-slot="{ open }" as="div" :class="classes.wrapper">
     <MenuButton>
       <slot name="activator">
-        <UButton
+        <u-button
           type="text"
           size="small"
         >
@@ -38,7 +38,7 @@ const classes: any = styles
           <template #appendIcon>
             <ChevronDownIcon class="h-5 w-5" aria-hidden="true" />
           </template>
-        </UButton>
+        </u-button>
       </slot>
     </MenuButton>
 
@@ -55,7 +55,7 @@ const classes: any = styles
                     :target="item.target"
                   >
                     <div v-if="item.iconSrc" class="mr-3 w-4 h-4">
-                      <UIcon :src="item.iconSrc" />
+                      <u-icon :src="item.iconSrc" />
                     </div>
                     {{ item.text }}
                   </a>

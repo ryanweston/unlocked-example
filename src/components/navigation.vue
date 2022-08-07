@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { MenuIcon, XIcon } from '@heroicons/vue/outline'
-import { UButton, UHeadline, withTheme } from '@unlocked/base'
+import { withTheme } from '@unlocked/base'
 import type { ButtonProps } from '@unlocked/base'
 
 export interface MenuProps {
@@ -57,9 +57,9 @@ const classes = styles
                 </a>
               </template>
               <a v-else :href="props.logoHref">
-                <UHeadline :size="4" :class="classes.logo.text">
+                <u-headline :size="4" :class="classes.logo.text">
                   {{ brand }}
-                </UHeadline>
+                </u-headline>
               </a>
             </slot>
           </div>
@@ -69,7 +69,7 @@ const classes = styles
         <div :class="classes.screenMenuWrapper">
           <div :class="classes.screenMenuContainer">
             <slot name="rightSide">
-              <UButton
+              <u-button
                 v-for="item in items"
                 :key="item.text"
                 :disabled="item.disabled"
@@ -90,7 +90,7 @@ const classes = styles
     <DisclosurePanel :class="classes.mobileWrapper">
       <div :class="classes.mobileContainer">
         <slot name="mobileMenu">
-          <UButton
+          <u-button
             v-for="item in items"
             :key="item.text"
             :disabled="item.disabled"

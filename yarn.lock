@@ -554,10 +554,10 @@
     "@typescript-eslint/types" "5.32.0"
     eslint-visitor-keys "^3.3.0"
 
-"@unlocked/base@^0.0.1-beta.8":
-  version "0.0.1-beta.8"
-  resolved "https://registry.yarnpkg.com/@unlocked/base/-/base-0.0.1-beta.8.tgz#6245b6279e34c4a432f15a6de391881769c95648"
-  integrity sha512-PFHO3qFuIV4xC36jzUqq9LbAXjrf7MbfByijwNkVpWHSSySiWMNOd5hvU5E38nUTZ7eJ6+tlwLdihm+aBcrPNg==
+"@unlocked/base@^0.0.1-beta.9":
+  version "0.0.1-beta.9"
+  resolved "https://registry.yarnpkg.com/@unlocked/base/-/base-0.0.1-beta.9.tgz#c09165d7a83eb9bc418da141c223a7b4156f921c"
+  integrity sha512-ZOO+SUPhzwR6v+bcmIUbLvgdn7WEixe1j00q7s81iP6Wb1lpFzRzzLZ0kGUCTvW0J4rm0qQu/1RYomiS9EJ+Aw==
   dependencies:
     "@headlessui/vue" "^1.0.0"
     "@heroicons/vue" "^1.0.6"
@@ -3756,7 +3756,7 @@ vite-plugin-md@^0.12.4:
     gray-matter "^4.0.3"
     markdown-it "^12.3.2"
 
-vite@^3.0.3:
+vite@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/vite/-/vite-3.0.4.tgz#c61688d6b97573e96cf5ac25f2d68597b5ce68e8"
   integrity sha512-NU304nqnBeOx2MkQnskBQxVsa0pRAH5FphokTGmyy8M3oxbvw7qAXts2GORxs+h/2vKsD+osMhZ7An6yK6F1dA==
@@ -3807,7 +3807,7 @@ vue3-carousel@^0.1.40:
   resolved "https://registry.yarnpkg.com/vue3-carousel/-/vue3-carousel-0.1.40.tgz#46f5a903703febddbf47ad155916a0a9c0f720f7"
   integrity sha512-rPIfBxFhsY6W6qKNGsjgzPJdngt07ov06/Ql1lKsTr8gBx73gUxCIIQo/7M3QCx3KU94CDGBbLugF5YGdEPefg==
 
-vue@^3.0.5, vue@^3.2.29:
+vue@^3.0.5, vue@^3.2.37:
   version "3.2.37"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.37.tgz#da220ccb618d78579d25b06c7c21498ca4e5452e"
   integrity sha512-bOKEZxrm8Eh+fveCqS1/NkG/n6aMidsI6hahas7pa0w/l7jkbssJVsRhVDs07IdDq7h9KHswZOgItnwJAgtVtQ==
